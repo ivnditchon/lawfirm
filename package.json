@@ -1,0 +1,25 @@
+{
+  "name": "lawfirm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build ./src/tailwindcss/style.css -o ./dist/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivnditchon/lawfirm.git"
+  },
+  "keywords": [],
+  "author": "Ivan Ditchon/Yujin Oliveros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivnditchon/lawfirm/issues"
+  },
+  "homepage": "https://github.com/ivnditchon/lawfirm#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.1.4"
+  }
+}
