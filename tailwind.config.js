@@ -35,7 +35,8 @@ module.exports = {
         }
       },
       backgroundImage: theme => ({
-        'bg-image': "url('../images/banner.jpg')"
+        'bg-image': "url('../images/banner.jpg')",
+        'rhd': "url('../images/rhd.jpg')"
       })
     },
   },

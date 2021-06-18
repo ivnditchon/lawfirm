@@ -1,7 +1,7 @@
 {
   "name": "lawfirm",
   "version": "1.0.0",
-  "description": "",
+  "description": "Torres & Lauban Law App",
   "main": "index.js",
   "scripts": {
     "build": "tailwindcss build ./src/tailwindcss/style.css -o ./dist/css/style.css"
