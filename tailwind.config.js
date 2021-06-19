@@ -13,26 +13,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        'softGreen': '#3b6f29',
+        'softGreen': '#447c31',
         'veryDarkCyan': '#003233',
-        'lightGreen': '#4A8A34'
+        'lightGreen': '#57a33e'
       },
       fontFamily: {
         primary: ['Poppins'],
         secondary: ['Stoke']
-      },
-      animation: {
-        'animate-modal': 'modal 1s ease-in-out forwards'
-      },
-      keyframes: {
-        modal: {  
-          'from': {
-            top: '-100%'
-          },
-          'to': {
-            top: '50%'
-          }
-        }
       },
       backgroundImage: theme => ({
         'bg-image': "url('../images/banner.jpg')",
@@ -41,7 +28,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      transitionDuration: ['hover'],
+    },
   },
   plugins: [],
 }
