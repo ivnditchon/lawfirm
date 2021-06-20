@@ -12,7 +12,7 @@ const menuObj = {
         });
     },
     menuInit: () => {
-        menuObj.menuToggle(sidebarActive); 
+        return menuObj.menuToggle(); 
     }
 };
 // Destructuring menu object
