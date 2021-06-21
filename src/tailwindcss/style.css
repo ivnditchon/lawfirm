@@ -7,6 +7,11 @@
     @apply left-0;
 }
 
+.overlay-active{
+    @apply block;
+}
+
 .body {
     @apply overflow-y-hidden;
 }
+

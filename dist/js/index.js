@@ -7,12 +7,12 @@ const menuObj = {
         menuObj.elem["menuElem"].addEventListener("click", () => {
             sidebarActive();
             if (sidebar.classList.contains("sidebar-active")) {
-                return closeBtn();
+                closeBtn();
             }
         });
     },
     menuInit: () => {
-        return menuObj.menuToggle(); 
+        menuObj.menuToggle(); 
     }
 };
 // Destructuring menu object
@@ -22,12 +22,19 @@ const { elem: { menuElem }, menuToggle, menuInit } = menuObj;
 const sidebarObj = {
     elem: {
         sidebar: document.querySelector("#sidebar"),
+        overlay: document.querySelector("#overlay"),
         close: document.querySelector("#close"),
         body: document.querySelector("body") 
     },
     sidebarActive: () => {
-        sidebarObj.elem["sidebar"].classList.add("sidebar-active"); 
-        sidebarObj.elem["body"].classList.add("body");
+        let sidebarShow = sidebarObj.elem["sidebar"].classList.add("sidebar-active"); 
+        let overlay = sidebarObj.elem["overlay"].classList.add("overlay-active");
+        let body = sidebarObj.elem["body"].classList.add("body");
+        return {
+            sidebarShow,
+            overlay,
+            body
+        };
     },
     closeBtn: () => {
         sidebarObj.elem["close"].addEventListener("click", () => {
@@ -36,9 +43,11 @@ const sidebarObj = {
     },
     sidebarHidden: () => {
         let sidebarClose = sidebarObj.elem["sidebar"].classList.remove("sidebar-active");
+        let overlay = sidebarObj.elem["overlay"].classList.remove("overlay-active");
         let body = sidebarObj.elem["body"].classList.remove("body");
         return {
             sidebarClose,
+            overlay,
             body
         };
     }
@@ -65,10 +74,30 @@ const navObj = {
 //Destructuring navigation obg
 const { navObjInit } = navObj;
 
+// Appointment button
+const appBtn = {
+    elem: {
+        btn: document.querySelectorAll("#appointment-btn")
+    },
+    btnToggle: () => {
+        Array.from(appBtn.elem["btn"], (btn) => {
+            btn.addEventListener("click", () => {
+                return window.location.href = "appointment__form.html","_self";
+            });
+        });
+    },
+    appBtnInit: () => {
+        appBtn.btnToggle();
+    }
+};
+// Destructuring appointment button
+const { appBtnInit } = appBtn;
+
 // Main function 
 const main = () => {
     menuInit();
     navObjInit();
+    appBtnInit();
 }
 
 // Invoke main
