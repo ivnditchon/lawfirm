@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="icon" href="./images/logo.png" type="image/icon">
+    <link rel="icon" href="./images/lawfirm-logo.png" type="image/icon">
     <script src="./js/index.js" defer></script>
     <title>Torres and Lauban Law - Home</title>
 </head>
@@ -18,34 +18,34 @@
     <header role="banner" class="w-full min-h-screen relative bg-bg-image bg-cover bg-no-repeat">
         <!-- Overlay image -->
         <div class="absolute left-0 top-0 right-0 bottom-0 w-full min-h-screen bg-black opacity-70 z-10"></div>
-        <div class="flex justify-between items-center px-3 py-3 md:px-5 md:py-5 ls:px-3 ls:py-3">
+        <div class="flex justify-between items-center px-3 py-3 md:px-5 md:py-5 ls:px-3 ls:py-3 lg:px-4 lg:py-4 xl:px-10">
             <!-- Menu icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" id="menu" class="relative z-20 h-6 w-6 fill-current text-gray-200 xs:h-5 xs:w-5 md:h-8 md:w-8 ls:h-5 ls:w-5" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu" class="relative z-20 h-6 w-6 fill-current text-gray-200 xs:h-5 xs:w-5 md:h-8 md:w-8 ls:h-5 ls:w-5 lg:h-7 lg:w-7 xl:hidden" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
             </svg>
             <!-- Logo -->
-            <img src="./images/lawfirm-logo.png" alt="Torres & Lauban Law logo" class="relative z-20 h-10 object-contain xs:h-8 md:h-12 ls:h-8">
+            <img src="./images/lawfirm-logo.png" alt="Torres & Lauban Law logo" class="relative z-20 h-10 object-contain xs:h-8 md:h-12 ls:h-8 lg:h-12">
             <!-- Sidebar -->
-            <div id="sidebar" class="absolute -left-full -inset-y-0 bottom-0 z-50 w-60 min-h-screen bg-black duration-500 ease-in-out">
-                <div class="flex justify-between items-center w-full h-auto px-3 py-3">
+            <div id="sidebar" class="absolute -left-full -inset-y-0 bottom-0 z-50 w-60 min-h-screen bg-black duration-500 ease-in-out md:w-80 xl:static xl:min-h-0 xl:bg-transparent xl:w-full xl:flex xl:justify-end xl:items-center">
+                <div class="flex justify-between items-center w-full h-auto px-3 py-3 xl:hidden">
                     <img src="./images/lawfirm-logo.png" alt="Torres & Lauban law logo" class="h-10 object-contain">
                     <span id="close" class="text-gray-200 text-lg">&#x2715</span>
                 </div>
-                <nav role="navigation" class="mt-5">
-                    <ul class="flex flex-col">
-                        <li class="px-4 py-2 border-b border-gray-500">
+                <nav role="navigation" class="mt-5 xl:mt-0">
+                    <ul class="flex flex-col xl:flex-row">
+                        <li class="px-4 py-2 border-b border-gray-500 xl:border-none xl:px-0 xl:py-0">
                             <a href="index.html" id="nav-link" class="text-sm text-gray-200 font-primary font-normal uppercase tracking-wider antialiased">home</a>
                         </li>
-                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500">
+                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500 xl:border-none xl:px-0 xl:py-0 xl:ml-6">
                             <a href="#section-1" class="text-sm text-gray-200 font-primary font-normal uppercase tracking-wider antialiased">why choose us</a>
                         </li>
-                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500">
+                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500 xl:border-none xl:px-0 xl:py-0 xl:ml-6">
                             <a href="#section-2-1" class="text-sm text-gray-200 font-primary font-normal uppercase tracking-wider antialiased">contact</a>
                         </li>
-                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500">
+                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500 xl:border-none xl:px-0 xl:py-0 xl:ml-6">
                             <a href="#section2-2" class="text-sm text-gray-200 font-primary font-normal uppercase tracking-wider antialiased">who we are</a>
                         </li>
-                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500">
+                        <li id="nav-link" class="px-4 py-2 border-b border-gray-500 xl:border-none xl:px-0 xl:py-0 xl:ml-6">
                             <a href="#section-4" class="text-sm text-gray-200 font-primary font-normal uppercase tracking-wider antialiased">our team</a>
                         </li>
                     </ul>
@@ -54,15 +54,15 @@
         </div>
         <!-- Big text -->
         <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full h-auto flex flex-col items-center">
-            <h1 class="text-5xl text-gray-200 font-secondary font-bold uppercase tracking-wider leading-snug antialiased xs:text-4xl xs:leading-snug sm:text-5xl sm:leading-normal md:text-7xl md:leading-normal ls:text-5xl ls:leading-normal">
+            <h1 class="text-5xl text-gray-200 font-secondary font-bold uppercase tracking-wider leading-snug antialiased xs:text-4xl xs:leading-snug sm:text-5xl sm:leading-normal md:text-7xl md:leading-normal ls:text-5xl ls:leading-normal lg:text-6xl lg:leading-normal xl:text-8xl xl:leading-normal">
                 <span class="flex justify-center xs:inline-block md:block ls:inline-block">torres</span>
-                <span class="flex justify-center xs:inline-block xs:px-2 md:block md:text-center ls:inline-block">&</span>
+                <span class="flex justify-center xs:inline-block xs:px-2 md:block md:text-center ls:inline-block lg:px-3">&</span>
                 <span class="flex justify-center xs:inline-block md:block ls:inline-block">lauban</span>
                 <span class="flex justify-center">law</span>
             </h1>
             <!-- Appointment button -->
-            <button id="appointment-btn" class="px-4 py-2 mt-5 text-md text-lightGreen font-primary font-semibold bg-transparent ring-2 ring-lightGreen rounded-sm uppercase tracking-wider antialiased hover:bg-lightGreen hover:text-gray-200 hover:duration-300 
-            xs:px-4 xs:py-2 xs:text-xs sm:text-sm md:text-xl md:px-6 md:py-3 ls:px-4 ls:py-2 ls:text-sm">
+            <button id="appointment-btn" class="px-4 py-2 mt-5 text-sm text-lightGreen font-primary font-semibold bg-transparent ring-2 ring-lightGreen rounded-sm uppercase tracking-wider antialiased hover:bg-lightGreen hover:text-gray-200 hover:duration-300 
+            xs:px-4 xs:py-2 xs:text-xs sm:text-sm md:text-xl md:px-6 md:py-3 ls:px-4 ls:py-2 ls:text-sm lg:text-base xl:text-lg xl:px-6 xl:py-3">
                 set appointment
             </button>
         </div>
@@ -71,16 +71,16 @@
     </header>
     <main role="main" class="w-full min-h-screen">
         <!-- Section 1 -->
-        <div id="section-1" class="flex flex-col items-center w-full h-auto px-5 py-7">
-            <h2 class="text-md text-veryDarkCyan font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl">why choose us</h2>
-            <p class="pt-5 text-xs text-veryDarkCyan font-primary font-light text-justify leading-normal md:text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quaerat, voluptates ut nemo aliquid voluptatibus rem excepturi tempore earum repellendus at deserunt vitae eius nobis omnis eligendi provident harum magni!</p>
+        <div id="section-1" class="flex flex-col items-center w-full h-auto px-5 py-7 xl:py-16">
+            <h2 class="text-md text-veryDarkCyan font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl xl:text-2xl">why choose us</h2>
+            <p class="mt-5 text-xs text-veryDarkCyan font-primary font-light text-justify leading-normal md:text-sm xl:w-3/4 xl:text-base  xl:text-center xl:mt-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quaerat, voluptates ut nemo aliquid voluptatibus rem excepturi tempore earum repellendus at deserunt vitae eius nobis omnis eligendi provident harum magni!</p>
         </div>
         <!-- Section 2 -->
-        <div id="section-2" class="flex flex-col">
+        <div id="section-2" class="flex flex-col xl:flex-row">
             <!-- Section 2 - 1 -->
             <div id="section-2-1" class="w-full h-auto flex flex-col bg-black px-5 py-7">
-                <h2 class="text-md text-gray-200 text-center font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl">contact</h2>
-                <div class="flex flex-col mt-6">
+                <h2 class="text-md text-gray-200 text-center font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl xl:text-2xl">contact</h2>
+                <div class="flex flex-col mt-6 xl:ml-10">
                     <div class="flex flex-col">
                         <div class="flex justify-start items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current text-gray-200 md:h-8 md:w-8" viewBox="0 0 20 20" fill="currentColor">
@@ -120,28 +120,28 @@
                 </div>
             </div>
             <!-- Section 2 - 2 -->
-            <div id="section-2-2" class="w-full h-auto flex flex-col items-center px-5 py-7 bg-gray-100">
-                <h2 class="text-md text-veryDarkCyan font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl">who we are</h2>
-                <p class="pt-5 text-xs text-veryDarkCyan font-primary font-light text-justify leading-normal md:text-sm">
+            <div id="section-2-2" class="w-full h-auto flex flex-col items-center px-5 py-7 bg-gray-100 xl:justify-center">
+                <h2 class="text-md text-veryDarkCyan font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl xl:text-2xl">who we are</h2>
+                <p class="pt-5 text-xs text-veryDarkCyan font-primary font-light text-justify leading-normal md:text-sm xl:w-3/4 xl:text-base">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt vitae, consequatur totam suscipit nisi aliquid non accusamus sunt cum culpa labore aspernatur ut. Minima incidunt corrupti, dignissimos est dolore id?
                 </p>
             </div>
         </div>
         <!-- Section 3 -->
-        <div class="flex flex-col items-center w-full h-auto py-7 border border-gray-200">
-            <h2 class="text-lg text-veryDarkCyan font-primary font-semibold uppercase antialiased md:text-xl">let our knowledge be your guide</h2>
+        <div class="flex flex-col items-center w-full h-auto py-8 border border-gray-200 xl:py-16">
+            <h2 class="text-lg text-veryDarkCyan font-primary font-semibold uppercase antialiased md:text-xl xl:text-4xl">let our knowledge be your guide!</h2>
             <button id="appointment-btn" class="px-4 py-2 mt-5 text-md text-gray-200 font-primary font-semibold bg-lightGreen rounded-sm uppercase tracking-wider antialiased hover:bg-lightGreen hover:text-gray-200 hover:duration-300
-             xs:px-4 xs:py-2 xs:text-xs sm:text-sm md:text-xl md:px-6 md:py-3 ls:px-4 ls:py-2 ls:text-sm">
+             xs:px-4 xs:py-2 xs:text-xs sm:text-sm md:text-xl md:px-6 md:py-3 ls:px-4 ls:py-2 ls:text-sm lg:text-base xl:text-lg xl:px-6 xl:py-3 xl:mt-10">
                 set appointment
             </button>
         </div>
         <!-- Section 4 -->
-        <div id="section-4" class="w-full h-auto px-5 py-7 bg-gray-100">
+        <div id="section-4" class="w-full h-auto px-5 py-7 bg-gray-100 xl:px-20 xl:py-10 2xl:px-20">
             <div class="flex flex-col items-center">
-                <h2 class="text-md text-veryDarkCyan font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl">our team</h2>
-                <p class="pt-5 text-xs text-veryDarkCyan font-primary font-light text-center leading-normal md:text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, optio!</p>
+                <h2 class="text-md text-veryDarkCyan font-primary font-semibold uppercase tracking-wide antialiased xs:text-lg md:text-xl xl:text-2xl">our team</h2>
+                <p class="pt-5 text-xs text-veryDarkCyan font-primary font-light text-center leading-normal md:text-sm xl:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, optio!</p>
             </div>
-            <div class="grid grid-cols-1 gap-10 justify-items-center my-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+            <div class="grid grid-cols-1 gap-10 justify-items-center my-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 xl:grid-cols-3 xl:gap-10 2xl:grid-cols-5">
                 <!-- Atty Torres profile -->
                 <div class="w-72 h-auto flex flex-col items-center py-7 bg-white shadow-md rounded-md">
                     <img src="./images/atty-torres.jpg" class="h-28 object-contain rounded-full" alt="Atty. Ronald Hallid D. Torres">
@@ -318,7 +318,7 @@
                     </div>
                 </div>
                 <!-- Norham profile -->
-                <div class="w-72 h-auto flex flex-col items-center py-7 bg-white shadow-md rounded-md">
+                <div class="w-72 h-auto flex flex-col items-center py-7 bg-white shadow-md rounded-md 2xl:col-span-5">
                     <img src="./images/norham.jpg" class="h-28 object-contain rounded-full" alt="Norham S. Abdulgapor">
                     <div class="flex flex-col items-center my-5">
                         <h2 class="text-md text-veryDarkCyan font-primary font-semibold border-b-4 border-lightGreen uppercase antialiased">norham s. abdulgapor</h2>
@@ -355,33 +355,33 @@
             </div>
         </div>
     </main>
-    <footer role="contentinfo" class="pl-5 py-5 bg-black">
-        <div class="flex flex-col">
-            <div class="flex justify-start items-center mb-7">
+    <footer role="contentinfo" class="w-full h-auto pl-5 py-5 bg-black xl:pl-0">
+        <div class="flex flex-col xl:flex-row xl:justify-between xl:px-10">
+            <div class="flex justify-start items-center mb-7 xl:mb-0">
                 <!-- Twitter -->
                 <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 object-contain fill-current text-gray-200 md:h-7 ls:h-4" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 object-contain fill-current text-gray-200 md:h-7 ls:h-4 lg:h-5" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640">
                         <path d="M640.012 121.513c-23.528 10.524-48.875 17.516-75.343 20.634 27.118-16.24 47.858-41.977 57.756-72.615-25.347 14.988-53.516 25.985-83.363 31.866-24-25.5-58.087-41.35-95.848-41.35-72.508 0-131.21 58.736-131.21 131.198 0 10.228 1.134 20.232 3.355 29.882-109.1-5.528-205.821-57.757-270.57-137.222a131.423 131.423 0 0 0-17.764 66c0 45.497 23.102 85.738 58.347 109.207-21.508-.638-41.74-6.638-59.505-16.359v1.642c0 63.627 45.225 116.718 105.32 128.718-11.008 2.988-22.63 4.642-34.606 4.642-8.48 0-16.654-.874-24.78-2.35 16.783 52.11 65.233 90.095 122.612 91.205-44.989 35.245-101.493 56.233-163.09 56.233-10.63 0-20.988-.65-31.334-1.89 58.229 37.359 127.206 58.997 201.31 58.997 241.42 0 373.552-200.069 373.552-373.54 0-5.764-.13-11.35-.366-16.996 25.642-18.343 47.87-41.493 65.469-67.844l.059-.059z"/>
                     </svg>
                 </a>
                 <!-- Facebook -->
                 <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 object-contain px-3 fill-current text-gray-200 md:h-7 md:px-5 ls:h-4 ls:px-3" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"  clip-rule="evenodd" viewBox="0 0 640 640"><path d="M380.001 120.001h99.993V0h-99.993c-77.186 0-139.986 62.8-139.986 139.986v60h-80.009V320h79.985v320h120.013V320h99.994l19.996-120.013h-119.99v-60.001c0-10.843 9.154-19.996 19.996-19.996v.012z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 object-contain px-3 fill-current text-gray-200 md:h-7 md:px-5 ls:h-4 ls:px-3 lg:h-5 lg:px-4" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"  clip-rule="evenodd" viewBox="0 0 640 640"><path d="M380.001 120.001h99.993V0h-99.993c-77.186 0-139.986 62.8-139.986 139.986v60h-80.009V320h79.985v320h120.013V320h99.994l19.996-120.013h-119.99v-60.001c0-10.843 9.154-19.996 19.996-19.996v.012z"/></svg>
                 </a>
                 <!-- Instagram -->
                 <a href="#">
-                    <svg id="Layer_1" data-name="Layer 1" class="h-4 object-contain pr-3 fill-current text-gray-200 md:h-7 md:pr-5 ls:h-4 ls:pr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.88"><title>instagram-logo-black-and-white</title>
+                    <svg id="Layer_1" data-name="Layer 1" class="h-4 object-contain pr-3 fill-current text-gray-200 md:h-7 md:pr-5 ls:h-4 ls:pr-3 lg:h-5 lg:pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.88"><title>instagram-logo-black-and-white</title>
                         <path d="M61.45,0C44.76,0,42.66.07,36.11.37A45.08,45.08,0,0,0,21.2,3.23a29.86,29.86,0,0,0-10.88,7.08,30.26,30.26,0,0,0-7.1,10.88A44.92,44.92,0,0,0,.37,36.11C.08,42.66,0,44.75,0,61.44S.07,80.21.37,86.77a45.08,45.08,0,0,0,2.86,14.91,30.12,30.12,0,0,0,7.08,10.88,30.13,30.13,0,0,0,10.88,7.1,45.17,45.17,0,0,0,14.92,2.85c6.55.3,8.64.37,25.33.37s18.77-.07,25.33-.37a45.17,45.17,0,0,0,14.92-2.85,31.54,31.54,0,0,0,18-18,45.6,45.6,0,0,0,2.86-14.91c.29-6.55.37-8.64.37-25.33s-.08-18.78-.37-25.33a45.66,45.66,0,0,0-2.86-14.92,30.1,30.1,0,0,0-7.09-10.88,29.77,29.77,0,0,0-10.88-7.08A45.14,45.14,0,0,0,86.76.37C80.2.07,78.12,0,61.43,0ZM55.93,11.07h5.52c16.4,0,18.34.06,24.82.36a34,34,0,0,1,11.41,2.11,19,19,0,0,1,7.06,4.6,19.16,19.16,0,0,1,4.6,7.06,34,34,0,0,1,2.11,11.41c.3,6.47.36,8.42.36,24.82s-.06,18.34-.36,24.82a33.89,33.89,0,0,1-2.11,11.4A20.35,20.35,0,0,1,97.68,109.3a33.64,33.64,0,0,1-11.41,2.12c-6.47.3-8.42.36-24.82.36s-18.35-.06-24.83-.36a34,34,0,0,1-11.41-2.12,19,19,0,0,1-7.07-4.59,19,19,0,0,1-4.59-7.06,34,34,0,0,1-2.12-11.41c-.29-6.48-.35-8.42-.35-24.83s.06-18.34.35-24.82a33.7,33.7,0,0,1,2.12-11.41,19,19,0,0,1,4.59-7.06,19.12,19.12,0,0,1,7.07-4.6A34.22,34.22,0,0,1,36.62,11.4c5.67-.25,7.86-.33,19.31-.34Zm38.31,10.2a7.38,7.38,0,1,0,7.38,7.37,7.37,7.37,0,0,0-7.38-7.37ZM61.45,29.89A31.55,31.55,0,1,0,93,61.44,31.56,31.56,0,0,0,61.45,29.89Zm0,11.07A20.48,20.48,0,1,1,41,61.44,20.48,20.48,0,0,1,61.45,41Z"/>
                     </svg>
                 </a>
                 <!-- Google -->
                 <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 object-contain fill-current text-gray-200 md:h-7 ls:h-4" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 object-contain fill-current text-gray-200 md:h-7 ls:h-4 lg:h-5" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640">
                         <path d="M326.331 274.255v109.761h181.49c-7.37 47.115-54.886 138.002-181.49 138.002-109.242 0-198.369-90.485-198.369-202.006 0-111.509 89.127-201.995 198.369-201.995 62.127 0 103.761 26.516 127.525 49.359l86.883-83.635C484.99 31.512 412.741-.012 326.378-.012 149.494-.012 6.366 143.116 6.366 320c0 176.884 143.128 320.012 320.012 320.012 184.644 0 307.256-129.876 307.256-312.653 0-21-2.244-36.993-5.008-52.997l-302.248-.13-.047.024z"></path>
                     </svg>
                 </a>
             </div>
-            <address class="text-xs text-gray-200 font-primary font-normal not-italic capitalize antialiased md:text-lg ls:text-xs">&copy; torres & lauban law</address>
+            <address class="text-xs text-gray-200 font-primary font-normal not-italic capitalize antialiased md:text-lg ls:text-xs lg:text-sm">&copy; torres & lauban law</address>
         </div>
     </footer>
 </body>

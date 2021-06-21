@@ -14,36 +14,36 @@
     <title>Torres and Lauban Law - Appointment form</title>
 </head>
 <body class="font-primary">
-    <div class="w-full min-h-screen flex flex-col justify-center items-center  bg-gray-200">
-        <div class="flex justify-between items-center w-full bg-white px-3 py-3">
-            <div class="flex">
-                <a href="index.html" class="text-sm text-veryDarkCyan font-normal capitalize antialiased">home</a>
+    <div class="relative w-full min-h-screen">
+        <div class="flex justify-between items-center sticky top-0 z-50 w-full bg-white px-3 py-3 border-b border-gray-300 md:px-5">
+            <div class="flex justify-between items-center relative z-50">
+                <a href="index.html" class="text-xs text-veryDarkCyan font-normal capitalize antialiased md:text-sm">home</a>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                 </svg>
-                <span class="text-sm text-veryDarkCyan font-normal capitalize antialiased">appointment form</span>
+                <span class="text-xs text-veryDarkCyan font-normal capitalize antialiased md:text-sm">appointment form</span>
             </div>
-            <img src="./images/lawfirm-logo.png" alt="Torres & Lauban Law logo" class="h-10 object-contain">
+            <img src="./images/lawfirm-logo.png" alt="Torres & Lauban Law logo" class="h-8 object-contain md:h-10">
         </div>
-        <div class="w-full h-auto px-3 py-5">
-            <form action="#" id="form" class="w-full max-w-5xl h-auto px-2 py-2 bg-white border border-softGray shadow-md">
+        <div class="w-full min-h-auto flex flex-col justify-center items-center px-3 py-4 bg-gray-200 md:min-h-screen">
+            <form action="#" id="form" class="w-full max-w-4xl h-auto px-2 py-2 bg-white border border-softGray shadow-md">
                 <h1 class="py-2 text-xl text-veryDarkCyan text-center font-bold uppercase tracking-wide antialiased">appointment form</h1>
                 <div class="flex flex-col w-full h-auto mt-3">
                     <h2 class="py-3 text-sm text-veryDarkCyan font-bold uppercase antialiased">fullname:</h2>
-                    <div class="flex flex-col lg:flex-row">
-                        <div class="flex flex-col py-3 lg:w-full">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="flex flex-col py-3 md:w-full">
                             <div class="relative px-1 py-1 border border-gray-300 rounded">
                                 <input type="text" name="firstname" id="firstname" class="w-full h-auto text-sm outline-none border-none" autocomplete="off">
                                 <label for="firstname" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-medium capitalize antialiased">firstname</label>
                             </div>
                         </div>
-                        <div class="flex flex-col py-3 lg:w-full lg:mx-1">
+                        <div class="flex flex-col py-3 md:w-full md:mx-2">
                             <div class="relative px-1 py-1 border border-gray-300 rounded">
                                 <input type="text" name="middlename" id="middlename" class="w-full h-auto text-xs outline-none border-none" autocomplete="off">
                                 <label for="middlename" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-medium capitalize antialiased">middlename</label>
                             </div>
                         </div>
-                        <div class="flex flex-col py-3 lg:w-full">
+                        <div class="flex flex-col py-3 md:w-full">
                             <div class="relative px-1 py-1 border border-gray-300 rounded">
                                 <input type="text" name="middlename" id="middlename" class="w-full h-auto text-xs outline-none border-none" autocomplete="off">
                                 <label for="middlename" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-medium capitalize antialiased">lastname</label>
@@ -54,7 +54,7 @@
                 <div class="flex flex-col w-full mt-3">
                     <h2 class="py-3 text-sm text-veryDarkCyan font-bold uppercase antialiased">contact:</h2>
                     <div class="flex flex-col lg:flex-row">
-                        <div class="flex flex-col py-3 lg:w-full lg:mr-1">
+                        <div class="flex flex-col py-3 lg:w-full lg:mr-2">
                             <div class="relative px-1 py-1 border border-gray-300 rounded">
                                 <input type="text" name="phone" id="phone" class="w-full h-auto text-xs outline-none border-none" autocomplete="off">
                                 <label for="phone" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-medium capitalize antialiased">phone</label>
@@ -101,21 +101,23 @@
                         </div>
                     </div>
                 </div>
-                <button class="w-full py-2 mt-6 mb-2 bg-lightGreen rounded-sm">
-                    <span class="text-sm text-gray-200 font-bold uppercase tracking-wider antialiased">submit</span>
-                </button>
+                <div class="flex justify-center items-center">
+                    <button class="w-full py-2 mt-6 mb-2 bg-lightGreen rounded-sm xs:w-32">
+                        <span class="text-sm text-gray-200 font-bold uppercase tracking-wider antialiased">submit</span>
+                    </button>
+                </div>
             </form>
         </div>
-        <!-- Appointment success modal -->
-        <div id="appointment-success" class="hidden absolute top-0 left-0 right-0 bottom-0 z-50 bg-gray-200 w-full min-h-screen">
-            <div class="flex flex-col items-center absolute left-1/2 -top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-auto animate-animate-modal px-2 py-2 bg-gray-100 rounded-sm shadow-lg">
-                <h2 class="flex flex-col px-2 pt-2 pb-4 text-xl text-darkGreen text-center font-bold uppercase tracking-wide antialiased">appointment <span>requested</span></h2>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <p class="px-3 py-4 text-xs text-darkGreen font-light text-justify leading-tight"><span class="font-bold">Note:</span> We will send an update in your email address and phone number, once your appointment is already cofirmed. Thank you!</p>
-                <a href="index.html" class="px-2 py-2 text-sm text-darkGreen font-semibold capitalize underline tracking-wide antialiased">home</a>
-            </div>
+    </div>
+    <!-- Appointment success modal -->
+    <div id="appointment-success" class="hidden absolute top-0 left-0 right-0 bottom-0 z-50 bg-gray-200 w-full min-h-screen">
+        <div class="flex flex-col items-center absolute left-1/2 -top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-auto animate-animate-modal px-2 py-2 bg-gray-100 rounded-sm shadow-lg">
+            <h2 class="flex flex-col px-2 pt-2 pb-4 text-xl text-darkGreen text-center font-bold uppercase tracking-wide antialiased">appointment <span>requested</span></h2>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <p class="px-3 py-4 text-xs text-darkGreen font-light text-justify leading-tight"><span class="font-bold">Note:</span> We will send an update in your email address and phone number, once your appointment is already cofirmed. Thank you!</p>
+            <a href="index.html" class="px-2 py-2 text-sm text-darkGreen font-semibold capitalize underline tracking-wide antialiased">home</a>
         </div>
     </div>
 </body>
