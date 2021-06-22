@@ -3,7 +3,7 @@ const menuObj = {
     elem: {
         menuElem: document.querySelector("#menu")
     },
-    menuToggle: () => { // sidebar callback function
+    menuToggle: () => { 
         menuObj.elem["menuElem"].addEventListener("click", () => {
             sidebarActive();
             if (sidebar.classList.contains("sidebar-active")) {
