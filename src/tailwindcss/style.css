@@ -17,7 +17,7 @@
 
 /* ======= APPOINTMENT FORM ======= */
 .form-control-active {
-    @apply border-2 border-gray-300;
+    @apply border border-gray-400;
 }
 
 .input-active + label {
