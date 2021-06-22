@@ -38,7 +38,7 @@ const sidebarObj = {
     },
     closeBtn: () => {
         sidebarObj.elem["close"].addEventListener("click", () => {
-            return sidebarObj.sidebarHidden();
+            sidebarObj.sidebarHidden();
         });
     },
     sidebarHidden: () => {
@@ -63,7 +63,7 @@ const navObj = {
     linkToggle: () => {
         Array.from(navObj.elem["links"], (link) => {
             link.addEventListener("click", () => {
-                return sidebarHidden();
+                sidebarHidden();
             });
         });
     },
