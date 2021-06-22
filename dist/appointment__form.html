@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="icon" href="./images/logo.png" type="image/icon">
+    <link rel="icon" href="./images/lawfirm-logo.png" type="image/icon">
     <script src="./js/appointment_form.js" defer></script>
     <title>Torres and Lauban Law - Appointment form</title>
 </head>
 <body class="font-primary">
     <div class="relative w-full min-h-screen">
-        <div class="flex justify-between items-center sticky top-0 z-50 w-full bg-white px-3 py-3 border-b border-gray-300 md:px-5">
+        <div class="flex justify-between items-center z-50 w-full bg-white px-3 py-3 border-b border-gray-300 md:px-5">
             <div class="flex justify-between items-center relative z-50">
                 <a href="index.html" class="text-xs text-veryDarkCyan font-normal capitalize antialiased md:text-sm">home</a>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
@@ -28,82 +28,72 @@
         </div>
         <div class="w-full min-h-auto flex flex-col justify-center items-center px-3 py-4 bg-gray-200 md:min-h-screen">
             <form action="#" id="form" class="w-full max-w-4xl h-auto px-2 py-2 bg-white border border-softGray shadow-md">
-                <h1 class="py-2 text-xl text-veryDarkCyan text-center font-bold uppercase tracking-wide antialiased">appointment form</h1>
-                <div class="flex flex-col w-full h-auto mt-3">
-                    <h2 class="py-3 text-sm text-veryDarkCyan font-bold uppercase antialiased">fullname:</h2>
-                    <div class="flex flex-col md:flex-row">
-                        <div class="flex flex-col py-3 md:w-full">
-                            <div class="relative px-1 py-1 border border-gray-300 rounded">
-                                <input type="text" name="firstname" id="firstname" class="input w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                                <label for="firstname" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">firstname</label>
-                            </div>
+                <h1 class="mt-2 text-xl text-veryDarkCyan text-center font-bold uppercase tracking-wide antialiased">appointment form</h1>
+                <div class="flex flex-col w-full h-auto mt-8">
+                    <h2 class="my-5 text-base text-veryDarkCyan font-bold uppercase antialiased">fullname:</h2>
+                    <div class="flex flex-col w-full h-auto">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="firstname" id="firstname" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="firstname" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">firstname</label>
                         </div>
-                        <div class="flex flex-col py-3 md:w-full md:mx-2">
-                            <div class="relative px-1 py-1 border border-gray-300 rounded">
-                                <input type="text" name="middlename" id="middlename" class="input w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                                <label for="middlename" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">middlename</label>
-                            </div>
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 my-7 border border-gray-300 rounded">
+                            <input type="text" name="middlename" id="middlename" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="middlename" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">middlename</label>
                         </div>
-                        <div class="flex flex-col py-3 md:w-full">
-                            <div class="relative px-1 py-1 border border-gray-300 rounded">
-                                <input type="text" name="middlename" id="middlename" class="input w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                                <label for="middlename" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">lastname</label>
-                            </div>
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="lastname" id="lastname" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="lastname" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">lastname</label>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col w-full mt-3">
-                    <h2 class="py-3 text-sm text-veryDarkCyan font-bold uppercase antialiased">contact:</h2>
-                    <div class="flex flex-col lg:flex-row">
-                        <div class="flex flex-col py-3 lg:w-full lg:mr-2">
-                            <div class="relative px-1 py-1 border border-gray-300 rounded">
-                                <input type="text" name="phone" id="phone" class="w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                                <label for="phone" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased">phone</label>
-                            </div>
+                <div class="flex flex-col w-full h-auto mt-10">
+                    <h2 class="text-base text-veryDarkCyan font-bold uppercase antialiased">contact:</h2>
+                    <div class="flex flex-col w-full h-auto mt-6">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 mb-7 border border-gray-300 rounded">
+                            <input type="text" name="phone" id="phone" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="phone" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">phone</label>
                         </div>
-                        <div class="flex flex-col py-3 lg:w-full">
-                            <div class="relative px-1 py-1 border border-gray-300 rounded">
-                                <input type="email  " name="email" id="email" class="w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                                <label for="email" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased">email</label>
-                            </div>
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="email" id="email" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="email" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">email</label>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col w-full mt-3">
-                    <h2 class="py-3 text-sm text-veryDarkCyan font-semibold uppercase antialiased">address:</h2>
-                    <div class="flex flex-col py-3 lg:w-full">
-                        <div class="relative px-1 py-1 border border-gray-300 rounded">
-                            <input type="text" name="street" id="street" class="w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                            <label for="street" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased">street</label>
+                <div class="flex flex-col w-full h-auto mt-10">
+                    <h2 class="text-base text-veryDarkCyan font-bold uppercase antialiased">address:</h2>
+                    <div class="flex flex-col w-full h-auto mt-6">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="street" id="street" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="street" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">street</label>
                         </div>
                     </div>
-                    <div class="flex flex-col py-3">
-                        <div class="relative px-1 py-1 border border-gray-300 rounded">
-                            <input type="text" name="city" id="city" class="w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                            <label for="city" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased">city</label>
+                    <div class="flex flex-col w-full h-auto my-7">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="city" id="city" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="city" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">city</label>
                         </div>
                     </div>
-                    <div class="flex flex-col py-3">
-                        <div class="relative px-1 py-1 border border-gray-300 rounded">
-                            <input type="text" name="province" id="province" class="input w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                            <label for="province" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased">province</label>
+                    <div class="flex flex-col w-full h-auto">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="province" id="province" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="province" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">province</label>
                         </div>
                     </div>
-                    <div class="flex flex-col py-3">
-                        <div class="relative px-1 py-1 border border-gray-300 rounded">
-                            <input type="text" name="zip-code" id="zip-code" class="input w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                            <label for="zip-code" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased">zip code</label>
+                    <div class="flex flex-col w-full h-auto my-7">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="zip-code" id="zip-code" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="zip-code" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">zip code</label>
                         </div>
                     </div>
-                    <div class="flex flex-col py-3">
-                        <div class="relative px-1 py-1 border border-gray-300 rounded">
-                            <input type="text" name="country" id="country" class="input w-full h-auto text-xs outline-none border-none" autocomplete="off">
-                            <label for="country" class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs text-veryDarkCyan font-normal capitalize antialiased">country</label>
+                    <div class="flex flex-col w-full h-auto">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
+                            <input type="text" name="country" id="country" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <label for="country" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">country</label>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center items-center">
-                    <button class="w-full py-2 mt-6 mb-2 bg-lightGreen rounded-sm xs:w-32">
+                <div class="flex justify-center items-center mt-12 mb-2">
+                    <button class="w-full py-2 bg-lightGreen rounded-sm xs:w-32">
                         <span class="text-sm text-gray-200 font-semibold uppercase tracking-wider antialiased">submit</span>
                     </button>
                 </div>
