@@ -1,8 +1,11 @@
+// Appointment form
 const appointmentFormObj = {
+    // Elements
     elem: {
         inputs: document.querySelectorAll("input"),
         labels: document.querySelectorAll("label")
     },
+    // Inputs
     input: () => {
         Array.from(appointmentFormObj.elem["inputs"], (inp) => {
             inp.addEventListener("focus", (e) => {
@@ -22,16 +25,19 @@ const appointmentFormObj = {
             });
         });
     },
+    // Appointment form initializer
     appFormInit: () => {
         appointmentFormObj.input();
     }
 };
-
+// Destructuring appointment form object
 const { appFormInit } = appointmentFormObj;
 
+// Main function
 const main = () => {
-    appFormInit();
+    appFormInit(); 
 }
 
+// Invoke main function
 main();
 
