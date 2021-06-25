@@ -26,35 +26,36 @@
             </div>
             <img src="./images/lawfirm-logo.png" alt="Torres & Lauban Law logo" class="h-8 object-contain md:h-10">
         </div>
-        <div class="w-full min-h-auto flex flex-col justify-center items-center px-3 py-4 bg-gray-200 md:min-h-screen">
+        <div class="relative w-full min-h-auto flex flex-col justify-center items-center px-3 py-4 bg-gray-200 md:min-h-screen">
+            <!-- Form -->
             <form action="#" id="form" class="w-full max-w-4xl h-auto px-4 py-2 bg-white border border-softGray shadow-md">
-                <h1 class="mt-2 text-xl text-veryDarkCyan text-center font-bold uppercase tracking-wide antialiased">appointment form</h1>
+                <h1 class="mt-2 text-xl text-veryDarkCyan text-center font-bold uppercase tracking-wide antialiased lg:text-2xl">appointment form</h1>
                 <div class="flex flex-col w-full h-auto mt-8">
                     <h2 class="my-5 text-base text-veryDarkCyan font-bold uppercase antialiased">fullname:</h2>
-                    <div class="flex flex-col w-full h-auto">
+                    <div class="flex flex-col w-full h-auto lg:flex-row">
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="firstname" id="firstname" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="firstname" id="firstname" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="firstname" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">firstname</label>
                         </div>
-                        <div class="relative flex items-center w-full h-10 px-2 py-2 my-7 border border-gray-300 rounded">
-                            <input type="text" name="middlename" id="middlename" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 my-7 border border-gray-300 rounded lg:mx-2 lg:my-0">
+                            <input type="text" name="middlename" id="middlename" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="middlename" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">middlename</label>
                         </div>
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="lastname" id="lastname" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="lastname" id="lastname" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="lastname" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">lastname</label>
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col w-full h-auto mt-10">
                     <h2 class="text-base text-veryDarkCyan font-bold uppercase antialiased">contact:</h2>
-                    <div class="flex flex-col w-full h-auto mt-6">
-                        <div class="relative flex items-center w-full h-10 px-2 py-2 mb-7 border border-gray-300 rounded">
-                            <input type="text" name="phone" id="phone" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                    <div class="flex flex-col w-full h-auto mt-6 lg:flex-row">
+                        <div class="relative flex items-center w-full h-10 px-2 py-2 mb-7 border border-gray-300 rounded lg:mb-0 lg:mr-2">
+                            <input type="text" name="phone" id="phone" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="phone" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">phone</label>
                         </div>
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="email" id="email" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="email" id="email" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="email" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">email</label>
                         </div>
                     </div>
@@ -63,52 +64,52 @@
                     <h2 class="text-base text-veryDarkCyan font-bold uppercase antialiased">address:</h2>
                     <div class="flex flex-col w-full h-auto mt-6">
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="street" id="street" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="street" id="street" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="street" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">street</label>
                         </div>
                     </div>
                     <div class="flex flex-col w-full h-auto my-7">
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="city" id="city" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="city" id="city" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="city" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">city</label>
                         </div>
                     </div>
                     <div class="flex flex-col w-full h-auto">
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="province" id="province" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="province" id="province" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="province" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">province</label>
                         </div>
                     </div>
                     <div class="flex flex-col w-full h-auto my-7">
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="zip-code" id="zip-code" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="zip-code" id="zip-code" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="zip-code" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">zip code</label>
                         </div>
                     </div>
                     <div class="flex flex-col w-full h-auto">
                         <div class="relative flex items-center w-full h-10 px-2 py-2 border border-gray-300 rounded">
-                            <input type="text" name="country" id="country" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off">
+                            <input type="text" name="country" id="country" class="input w-full h-auto text-sm font-normal outline-none border-none" autocomplete="off" required>
                             <label for="country" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm text-veryDarkCyan font-normal capitalize antialiased duration-500 ease-in-out">country</label>
                         </div>
                     </div>
                 </div>
                 <div class="flex justify-center items-center mt-12 mb-2">
-                    <button class="w-full py-2 bg-lightGreen rounded-sm xs:w-32">
-                        <span class="text-sm text-gray-200 font-semibold uppercase tracking-wider antialiased">submit</span>
+                    <button class="w-full py-2 bg-lightGreen rounded-sm xs:w-32 hover:bg-softGreen hover:duration-300">
+                        <span class="text-base text-gray-200 font-semibold uppercase tracking-wider antialiased">submit</span>
                     </button>
                 </div>
             </form>
-        </div>
-    </div>
-    <!-- Appointment success modal -->
-    <div id="appointment-success" class="hidden absolute top-0 left-0 right-0 bottom-0 z-50 bg-gray-200 w-full min-h-screen">
-        <div class="flex flex-col items-center absolute left-1/2 -top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-auto animate-animate-modal px-2 py-2 bg-gray-100 rounded-sm shadow-lg">
-            <h2 class="flex flex-col px-2 pt-2 pb-4 text-xl text-darkGreen text-center font-bold uppercase tracking-wide antialiased">appointment <span>requested</span></h2>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <p class="px-3 py-4 text-xs text-darkGreen font-light text-justify leading-tight"><span class="font-bold">Note:</span> We will send an update in your email address and phone number, once your appointment is already cofirmed. Thank you!</p>
-            <a href="index.html" class="px-2 py-2 text-sm text-darkGreen font-semibold capitalize underline tracking-wide antialiased">home</a>
+            <!-- Appointment success modal -->
+            <div id="appointment-success-modal" class="flex justify-center items-center absolute -top-full z-50 w-full  min-h-screen px-5 backdrop-filter backdrop-blur-sm">
+                <div class="flex flex-col items-center w-full max-w-xs h-auto px-2 py-5 bg-white rounded-sm shadow-lg ring-1 ring-gray-300">
+                    <h2 class="flex flex-col text-2xl text-darkGreen text-center font-bold uppercase tracking-wide antialiased">appointment <span>requested</span></h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-28 w-28 my-5 text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="px-3 text-xs text-darkGreen font-light text-justify leading-normal"><span class="text-sm font-bold uppercase">note:</span> We will send an update in your email address and phone number, once your appointment is already cofirmed. Thank you!</p>
+                    <a href="index.html" class="mt-10 text-sm text-darkGreen font-semibold capitalize underline tracking-wide antialiased">home</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

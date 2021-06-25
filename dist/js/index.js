@@ -81,7 +81,8 @@ const appBtn = {
     },
     btnToggle: () => {
         Array.from(appBtn.elem["btn"], (btn) => {
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
                 return window.location.href = "appointment__form.html","_self";
             });
         });
