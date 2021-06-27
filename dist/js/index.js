@@ -1,3 +1,63 @@
+class Home {
+
+    constructor(menuBtn, sidebar, closeBtn, navLinks, appBtn) {
+        this.menuBtn = menuBtn;
+        this.sidebar = sidebar;
+        this.closeBtn = closeBtn;
+        this.navLinks = navLinks;
+        this.appBtn = appBtn;
+    }
+
+    // Menu toggle
+    menuToggle() {
+        this.menuBtn.addEventListener("click", () => {
+            this.setSidebarActive();
+            if(this.sidebar.classList.contains("sidebar-active")) {
+                return this.sidebarBtnClose();
+            }
+        });
+    }
+
+    // Sidebar active
+    setSidebarActive() {
+        this.sidebar.classList.add("sidebar-active");
+    }
+
+    // Sidebar hidden 
+    setSidebarHidden() {
+        return this.sidebar.classList.remove("sidebar-active");
+    }
+
+    // Sidebar close button 
+    sidebarBtnClose() {
+        this.closeBtn.addEventListener("click", () => this.setSidebarHidden());
+    }
+
+    // Navigation 
+    setNav() {
+        Array.from(this.navLinks, (links) => {
+            links.addEventListener("click", () => this.setSidebarHidden());
+        });
+    }
+
+    // Appointment button
+    setAppBtn() {
+        Array.from(this.appBtn, (appBtn) => {
+            appBtn.addEventListener("click", () => window.location.href = "appointment__form.html","_self");
+        })
+    }
+    
+}
+
+let home = new Home(document.querySelector("#menu"), document.querySelector("#sidebar"), document.querySelector("#close"), document.querySelectorAll("#nav-link"), document.querySelectorAll("#appointment-btn"));
+home.menuToggle();
+home.setNav();
+home.setAppBtn();
+
+
+
+/* USING OBJECT LITERALS
+
 // Menu
 const menuObj = {
     elem: {
@@ -38,7 +98,7 @@ const sidebarObj = {
     },
     closeBtn: () => {
         sidebarObj.elem["close"].addEventListener("click", () => {
-            sidebarObj.sidebarHidden();
+            return sidebarObj.sidebarHidden();
         });
     },
     sidebarHidden: () => {
@@ -103,3 +163,4 @@ const main = () => {
 
 // Invoke main
 main();
+*/

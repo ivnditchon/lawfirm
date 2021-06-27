@@ -7,7 +7,7 @@
     @apply left-0;
 }
 
-.overlay-active{
+.sidebar-active + #overlay {
     @apply block;
 }
 
@@ -25,12 +25,12 @@
 
 /* Input is active */
 .input-active + label {
-    @apply -top-2 left-0 text-xs;
+    @apply -top-2 xl:-top-3 left-0 text-xs xl:text-sm;
 }
 
 /* Appointment modal success */
 .appointment-success-modal {
-    @apply top-0;
+    @apply block;
 }
 
 

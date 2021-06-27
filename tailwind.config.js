@@ -21,6 +21,19 @@ module.exports = {
         primary: ['Poppins'],
         secondary: ['Stoke']
       },
+      animation: {
+        'modal': 'modal 0.8s ease-in-out forwards'
+      },
+      keyframes: {
+        modal: {  
+          'from': {
+            top: '-50%'
+          },
+          'to': {
+            top: '50%'
+          }
+        }
+      },
       backgroundImage: theme => ({
         'bg-image': "url('../images/banner.jpg')",
         'rhd': "url('../images/rhd.jpg')"
