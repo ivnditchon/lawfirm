@@ -1,37 +1,46 @@
 class Sidebar {
 
-    constructor() {}
-
-    sidebarActive(sidebar) {
-        return sidebar.classList.add("sidebar-active");
+    constructor(sidebar, navLinks, closeBtn, body) {
+        this._sidebar = sidebar;
+        this._navLinks = navLinks;
+        this._closeBtn = closeBtn;
+        this._body = body;
     }
 
-    sidebarHidden(sidebar) {
-        return sidebar.classList.remove("sidebar-active");
+    get sidebar() {
+        return this._sidebar;
     }
 
-    sidebarCloseBtn(closeBtn, sidebar, body) {
-        closeBtn.addEventListener("click", () => {
-            this.sidebarHidden(sidebar);
-            this.scrollActive(body)
+    sidebarActive() {
+        return this._sidebar.classList.add("sidebar-active");
+    }
+
+    sidebarHidden() {
+        return this._sidebar.classList.remove("sidebar-active");
+    }
+
+    sidebarCloseBtn() {
+        this._closeBtn.addEventListener("click", () => {
+            this.sidebarHidden();
+            this.scrollActive()
         });
     }
     
-    linkToggle(navLinks, sidebar, body) {
-        Array.from(navLinks, (link) => {
+    linkToggle() {
+        Array.from(this._navLinks, (link) => {
             link.addEventListener("click", () => {
-                this.sidebarHidden(sidebar);
-                this.scrollActive(body)
+                this.sidebarHidden();
+                this.scrollActive()
             });
         });
     }
 
-    scrollHide(body) { // Prevent from srolling the body 
-        return body.classList.add("body");
+    scrollHide() { // Prevent from srolling the body 
+        return this._body.classList.add("body");
     }
 
-    scrollActive(body) {
-        return body.classList.remove("body");
+    scrollActive() {
+        return this._body.classList.remove("body");
     }
 
 }

@@ -18,12 +18,12 @@ class Index {
     menuToggle() { // Menu button toggle
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(); // Object instance 
+            let sidebar = new Sidebar(this._sidebar, this._navLinks, this._closeBtn, this._body); // Object instance of sidebar constructor
             sidebar.sidebarActive(this._sidebar);
             if (this._sidebar.classList.contains("sidebar-active")) {
-                sidebar.scrollHide(this._body);
-                sidebar.linkToggle(this._navLinks, this._sidebar, this._body);
-                sidebar.sidebarCloseBtn(this._closeBtn, this._sidebar, this._body);  
+                sidebar.scrollHide();
+                sidebar.linkToggle();
+                sidebar.sidebarCloseBtn();  
             }
         });
     }
@@ -32,7 +32,7 @@ class Index {
         Array.from(this._appointmentBtn, (btn) => {
             btn.addEventListener("click", (e) => {
                 e.preventDefault();
-                let form = new Form(); // Object instance of the form constructor
+                let form = new Form(); // Object instance of form constructor
                 form.appFormAddress();
             });
         }); 
