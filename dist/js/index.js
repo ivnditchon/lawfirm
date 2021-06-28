@@ -1,42 +1,48 @@
 // Using module pattern 
-import Sidebar from "./sidebar.js";
-import Form from "./form.js";
+import Sidebar from "./sidebar.js"; // Sidebar class
+import Form from "./form.js";   // Form class
 
 class Index {
 
     // Private properties
-    constructor(menuBtn, appointmentBtn) {
-        this._menuBtn = menuBtn;
-        this._appointmentBtn = appointmentBtn;
+    constructor(menuBtn, appointmentBtn, body) {
+        this._menuBtn = menuBtn; // menu button
+        this._appointmentBtn = appointmentBtn; // appointment button
+        this._body = body; // Body of the page
     }
 
-    // Public method
-    menuToggle() {
+    // Public methods
+    menuToggle() { // Menu button toggle
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelector("#close"), document.querySelectorAll("#nav-link"));
+            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelector("#close"), document.querySelectorAll("#nav-link")); // Object instance of the sidebar constructor
             sidebar.sidebarActive();
 
             if (sidebar.sidebar.classList.contains("sidebar-active")) {
-                sidebar.linkToggle();
-                sidebar.sidebarCloseBtn();
+                this.setBody(); // Prevent from scrolling the body if sidebar is active
+                sidebar.linkToggle(); 
+                sidebar.sidebarCloseBtn(); 
             }
         });
     }
 
-    setAppForm() {
+    setAppForm() { // Set appointment form
         Array.from(this._appointmentBtn, (btn) => {
             btn.addEventListener("click", (e) => {
                 e.preventDefault();
-                let form = new Form();
+                let form = new Form(); // Object instance of the form constructor
                 form.appFormAddress();
             });
         }); 
     }
 
+    setBody() { // Prevent from srolling the body 
+        return this._body.classList.add("body");
+    }
+
 }
 
-let index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"));
+let index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"), document.querySelector("body"));
 index.menuToggle();
 index.setAppForm();
 
