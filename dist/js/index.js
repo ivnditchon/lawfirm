@@ -14,10 +14,11 @@ class Index {
     menuToggle() {
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelector("#close"));
+            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelector("#close"), document.querySelectorAll("#nav-link"));
             sidebar.sidebarActive();
 
             if (sidebar.sidebar.classList.contains("sidebar-active")) {
+                sidebar.linkToggle();
                 sidebar.sidebarCloseBtn();
             }
         });

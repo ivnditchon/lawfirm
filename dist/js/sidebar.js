@@ -28,9 +28,7 @@ class Sidebar {
     
     linkToggle() {
         Array.from(this._navLinks, (link) => {
-            link.addEventListener("click", () => {
-                this.sidebarHidden();
-            });
+            link.addEventListener("click", () => this.sidebarHidden());
         });
     }
 
