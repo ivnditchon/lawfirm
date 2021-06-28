@@ -33,7 +33,7 @@ class Index {
             btn.addEventListener("click", (e) => {
                 e.preventDefault();
                 let form = new Form(); // Object instance of form constructor
-                form.appFormAddress();
+                form.appFormAddress;
             });
         }); 
     }
