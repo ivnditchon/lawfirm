@@ -5,23 +5,25 @@ import Form from "./form.js";   // Form class
 class Index {
 
     // Private properties
-    constructor(menuBtn, appointmentBtn, body) {
-        this._menuBtn = menuBtn; // menu button
-        this._appointmentBtn = appointmentBtn; // appointment button
-        this._body = body; // Body of the page
+    constructor() {
+        this._menuBtn = document.querySelector("#menu");
+        this._sidebar = document.querySelector("#sidebar");
+        this._navLinks = document.querySelectorAll("#nav-link"); 
+        this._closeBtn = document.querySelector("#close");
+        this._appointmentBtn = document.querySelectorAll("#appointment-btn");
+        this._body = document.querySelector("body");     
     }
 
     // Public methods
     menuToggle() { // Menu button toggle
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelector("#close"), document.querySelectorAll("#nav-link")); // Object instance of the sidebar constructor
-            sidebar.sidebarActive();
-
-            if (sidebar.sidebar.classList.contains("sidebar-active")) {
-                this.setBody(); // Prevent from scrolling the body if sidebar is active
-                sidebar.linkToggle(); 
-                sidebar.sidebarCloseBtn(); 
+            let sidebar = new Sidebar(); // Object instance 
+            sidebar.sidebarActive(this._sidebar);
+            if (this._sidebar.classList.contains("sidebar-active")) {
+                sidebar.scrollHide(this._body);
+                sidebar.linkToggle(this._navLinks, this._sidebar, this._body);
+                sidebar.sidebarCloseBtn(this._closeBtn, this._sidebar, this._body);  
             }
         });
     }
@@ -36,13 +38,9 @@ class Index {
         }); 
     }
 
-    setBody() { // Prevent from srolling the body 
-        return this._body.classList.add("body");
-    }
-
 }
 
-let index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"), document.querySelector("body"));
+let index = new Index();
 index.menuToggle();
 index.setAppForm();
 

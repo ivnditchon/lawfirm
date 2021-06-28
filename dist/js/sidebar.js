@@ -1,35 +1,37 @@
 class Sidebar {
 
-    // Private properties
-    constructor(sidebar, closeBtn, navLinks) {
-        this._sidebar = sidebar;
-        this._closeBtn = closeBtn;
-        this._navLinks = navLinks;
+    constructor() {}
+
+    sidebarActive(sidebar) {
+        return sidebar.classList.add("sidebar-active");
     }
 
-    // Public method
-    get sidebar() {
-        return this._sidebar;
+    sidebarHidden(sidebar) {
+        return sidebar.classList.remove("sidebar-active");
     }
 
-    sidebarActive() {
-        let active = this._sidebar.classList.add("sidebar-active");
-        return active;
-    }
-
-    sidebarHidden() {
-        let hidden = this._sidebar.classList.remove("sidebar-active");
-        return hidden;
-    }
-
-    sidebarCloseBtn() {
-        this._closeBtn.addEventListener("click", () => this.sidebarHidden());
+    sidebarCloseBtn(closeBtn, sidebar, body) {
+        closeBtn.addEventListener("click", () => {
+            this.sidebarHidden(sidebar);
+            this.scrollActive(body)
+        });
     }
     
-    linkToggle() {
-        Array.from(this._navLinks, (link) => {
-            link.addEventListener("click", () => this.sidebarHidden());
+    linkToggle(navLinks, sidebar, body) {
+        Array.from(navLinks, (link) => {
+            link.addEventListener("click", () => {
+                this.sidebarHidden(sidebar);
+                this.scrollActive(body)
+            });
         });
+    }
+
+    scrollHide(body) { // Prevent from srolling the body 
+        return body.classList.add("body");
+    }
+
+    scrollActive(body) {
+        return body.classList.remove("body");
     }
 
 }
