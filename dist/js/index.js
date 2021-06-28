@@ -1,60 +1,78 @@
+// Using module pattern 
+import Menu from "./menu.js";
+
+class Index {
+
+    constructor() {}
+
+    menuToggle() {
+        let menu = new Menu(document.querySelector("#menu"));
+        menu.toggle();
+    }
+
+}
+
+let index = new Index();
+index.menuToggle();
+
+/*
 class Home {
 
     constructor(menuBtn, sidebar, closeBtn, navLinks, appBtn) {
-        this.menuBtn = menuBtn;
-        this.sidebar = sidebar;
-        this.closeBtn = closeBtn;
-        this.navLinks = navLinks;
-        this.appBtn = appBtn;
+        this._menuBtn = menuBtn;
+        this._sidebar = sidebar;
+        this._closeBtn = closeBtn;
+        this._navLinks = navLinks;
+        this._appBtn = appBtn;
     }
-
+    
     // Menu toggle
     menuToggle() {
-        this.menuBtn.addEventListener("click", () => {
-            this.setSidebarActive();
-            if(this.sidebar.classList.contains("sidebar-active")) {
-                return this.sidebarBtnClose();
+        this._menuBtn.addEventListener("click", () => {
+            this.sidebarActive();
+            if(this._sidebar.classList.contains("sidebar-active")) {
+                return this.sidebarCloseBtn();
             }
         });
     }
 
     // Sidebar active
-    setSidebarActive() {
-        this.sidebar.classList.add("sidebar-active");
+    sidebarActive() {
+        return this._sidebar.classList.add("sidebar-active");
     }
 
     // Sidebar hidden 
-    setSidebarHidden() {
-        return this.sidebar.classList.remove("sidebar-active");
+    sidebarHidden() {
+        return this._sidebar.classList.remove("sidebar-active");
     }
 
     // Sidebar close button 
-    sidebarBtnClose() {
-        this.closeBtn.addEventListener("click", () => this.setSidebarHidden());
+    sidebarCloseBtn() {
+        this._closeBtn.addEventListener("click", () => {
+            return this.sidebarHidden();
+        });
     }
 
     // Navigation 
     setNav() {
-        Array.from(this.navLinks, (links) => {
+        Array.from(this._navLinks, (links) => {
             links.addEventListener("click", () => this.setSidebarHidden());
         });
     }
 
     // Appointment button
     setAppBtn() {
-        Array.from(this.appBtn, (appBtn) => {
+        Array.from(this._appBtn, (appBtn) => {
             appBtn.addEventListener("click", () => window.location.href = "appointment__form.html","_self");
         })
     }
+
     
 }
 
 let home = new Home(document.querySelector("#menu"), document.querySelector("#sidebar"), document.querySelector("#close"), document.querySelectorAll("#nav-link"), document.querySelectorAll("#appointment-btn"));
-home.menuToggle();
-home.setNav();
-home.setAppBtn();
 
-
+*/
 
 /* USING OBJECT LITERALS
 
