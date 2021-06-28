@@ -1,19 +1,43 @@
 // Using module pattern 
-import Menu from "./menu.js";
+import Sidebar from "./sidebar.js";
+import Form from "./form.js";
 
 class Index {
 
-    constructor() {}
+    // Private properties
+    constructor(menuBtn, appointmentBtn) {
+        this._menuBtn = menuBtn;
+        this._appointmentBtn = appointmentBtn;
+    }
 
+    // Public method
     menuToggle() {
-        let menu = new Menu(document.querySelector("#menu"));
-        menu.toggle();
+        this._menuBtn.addEventListener("click", (e) =>  {
+            e.preventDefault();
+            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelector("#close"));
+            sidebar.sidebarActive();
+
+            if (sidebar.sidebar.classList.contains("sidebar-active")) {
+                sidebar.sidebarCloseBtn();
+            }
+        });
+    }
+
+    setAppForm() {
+        Array.from(this._appointmentBtn, (btn) => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                let form = new Form();
+                form.appFormAddress();
+            });
+        }); 
     }
 
 }
 
-let index = new Index();
+let index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"));
 index.menuToggle();
+index.setAppForm();
 
 /*
 class Home {

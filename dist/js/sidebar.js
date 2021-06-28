@@ -1,10 +1,13 @@
 class Sidebar {
 
-    constructor(sidebar, closeBtn) {
+    // Private properties
+    constructor(sidebar, closeBtn, navLinks) {
         this._sidebar = sidebar;
         this._closeBtn = closeBtn;
+        this._navLinks = navLinks;
     }
 
+    // Public method
     get sidebar() {
         return this._sidebar;
     }
@@ -21,6 +24,14 @@ class Sidebar {
 
     sidebarCloseBtn() {
         this._closeBtn.addEventListener("click", () => this.sidebarHidden());
+    }
+    
+    linkToggle() {
+        Array.from(this._navLinks, (link) => {
+            link.addEventListener("click", () => {
+                this.sidebarHidden();
+            });
+        });
     }
 
 }
