@@ -16,7 +16,7 @@ class Index {
     menuToggle() { // Menu button toggle
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelectorAll("#nav-link"), document.querySelector("#close"), document.querySelector("body")); // Object instance of sidebar constructor
+            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelectorAll("#nav-link"), document.querySelector("#close"), document.querySelector("body")); // Object instance of Sidebar class
             sidebar.sidebarActive = "sidebar-active";
             if (sidebar.sidebar.classList.contains("sidebar-active")) {
                 let scroll = new Scroll(document.querySelector("body"));
@@ -31,7 +31,7 @@ class Index {
         Array.from(this._appointmentBtn, (btn) => {
             btn.addEventListener("click", (e) => {
                 e.preventDefault();
-                let form = new Form(); // Object instance of form constructor
+                let form = new Form(); // Object instance of Form class
                 form.appFormAddress;
             });
         }); 
