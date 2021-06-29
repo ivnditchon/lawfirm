@@ -1,3 +1,5 @@
+import Scroll from "./scroll.js"; // Scroll class
+
 class Sidebar {
 
     constructor(sidebar, navLinks, closeBtn, body) {
@@ -11,25 +13,26 @@ class Sidebar {
         return this._sidebar;
     }
 
-    sidebarActive() {
-        return this._sidebar.classList.add("sidebar-active");
+    set sidebarActive(active) {
+        return this._sidebar.classList.add(active);
     }
 
-    sidebarHidden() {
-        return this._sidebar.classList.remove("sidebar-active");
+    set sidebarHidden(hidden) {
+        return this._sidebar.classList.remove(hidden);
     }
 
     sidebarCloseBtn() {
         this._closeBtn.addEventListener("click", () => {
-            this.sidebarHidden();
-            this.scrollActive()
+            this.sidebarHidden = "sidebar-active";
+            let scroll = new Scroll(document.querySelector("body"));
+            scroll.scrollActive = "body";
         });
     }
     
     linkToggle() {
         Array.from(this._navLinks, (link) => {
             link.addEventListener("click", () => {
-                this.sidebarHidden();
+                this.sidebarHidden = "sidebar-active";
                 this.scrollActive()
             });
         });

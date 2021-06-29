@@ -1,27 +1,26 @@
 // Using module pattern 
 import Sidebar from "./sidebar.js"; // Sidebar class
 import Form from "./form.js";   // Form class
+import Scroll from "./scroll.js"; // Scroll class
 
 class Index {
 
     // Private properties
-    constructor() {
-        this._menuBtn = document.querySelector("#menu");
-        this._sidebar = document.querySelector("#sidebar");
-        this._navLinks = document.querySelectorAll("#nav-link"); 
-        this._closeBtn = document.querySelector("#close");
-        this._appointmentBtn = document.querySelectorAll("#appointment-btn");
-        this._body = document.querySelector("body");     
+    constructor(menuBtn, appBtn, indexBody) {
+        this._menuBtn = menuBtn;
+        this._appointmentBtn = appBtn;
+        this._body = indexBody;     
     }
 
     // Public methods
     menuToggle() { // Menu button toggle
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(this._sidebar, this._navLinks, this._closeBtn, this._body); // Object instance of sidebar constructor
-            sidebar.sidebarActive(this._sidebar);
-            if (this._sidebar.classList.contains("sidebar-active")) {
-                sidebar.scrollHide();
+            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelectorAll("#nav-link"), document.querySelector("#close"), document.querySelector("body")); // Object instance of sidebar constructor
+            sidebar.sidebarActive = "sidebar-active";
+            if (sidebar.sidebar.classList.contains("sidebar-active")) {
+                let scroll = new Scroll(document.querySelector("body"));
+                scroll.scrollHidden = "body";
                 sidebar.linkToggle();
                 sidebar.sidebarCloseBtn();  
             }
@@ -40,7 +39,7 @@ class Index {
 
 }
 
-let index = new Index();
+let index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"), document.querySelector("body"));
 index.menuToggle();
 index.setAppForm();
 

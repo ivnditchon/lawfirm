@@ -1,7 +1,7 @@
 class Form {
 
     constructor() {
-        this._path = window.location.href = "appointment__form.html","_self"
+        this._path = window.location.href = "appointment__form.html","_self";
     }
 
     // Public method
