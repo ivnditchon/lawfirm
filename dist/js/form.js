@@ -1,14 +1,47 @@
-class Form {
+import FormControl from "./form_control.js";
 
-    constructor() {
-        this._path = window.location.href = "appointment__form.html","_self";
+export default class Form {
+
+    // Private properties
+    constructor(appForm, input) {
+        this._appForm = appForm;
+        this._input = input;
     }
 
     // Public method
-    get appFormAddress() {
-        return this._path;
+    input() {
+        
+        Array.from(this._input, (input) => {
+            //Focus in input field
+            input.addEventListener("focus", (e) => {
+                
+                if (e.target.value === "" | e.target.value === null) {
+                    let formControl = e.target.parentElement;
+                    let form  = new FormControl(formControl, e.target);
+                    form.inputActive = "input-active";
+                    form.formControlActive = "form-control-active";
+                }
+
+            });
+            // Focus out input field
+            input.addEventListener("focusout", (e) => {
+                
+                if (e.target.value === "" | e.target.value === null) {
+                    let formControl = e.target.parentElement;
+                    let form  = new FormControl(formControl, e.target);
+                    form.inputNotActive = "input-active";
+                    form.formControlNotActive = "form-control-active";
+                }
+
+            });
+
+        });
+
     }
 
 }
 
-export default Form;
+const inputActive = new Form(document.querySelector("#form"), document.querySelectorAll("input"));
+inputActive.input();
+
+

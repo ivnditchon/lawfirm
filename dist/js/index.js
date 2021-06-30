@@ -14,32 +14,37 @@ class Index {
 
     // Public methods
     menuToggle() { // Menu button toggle
+        
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
             let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelectorAll("#nav-link"), document.querySelector("#close"), document.querySelector("body")); // Object instance of Sidebar class
             sidebar.sidebarActive = "sidebar-active";
+            
             if (sidebar.sidebar.classList.contains("sidebar-active")) {
                 let scroll = new Scroll(document.querySelector("body"));
                 scroll.scrollHidden = "body";
                 sidebar.linkToggle();
                 sidebar.sidebarCloseBtn();  
             }
+            
         });
+
     }
 
     setAppForm() { // Set appointment form
+        
         Array.from(this._appointmentBtn, (btn) => {
             btn.addEventListener("click", (e) => {
                 e.preventDefault();
-                let form = new Form(); // Object instance of Form class
-                form.appFormAddress;
+                window.location.href = "appointment__form.html","_self";
             });
-        }); 
+        });
+
     }
 
 }
 
-let index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"), document.querySelector("body"));
+const index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"), document.querySelector("body"));
 index.menuToggle();
 index.setAppForm();
 
