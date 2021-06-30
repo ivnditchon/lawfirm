@@ -1,6 +1,5 @@
 // Using module pattern 
 import Sidebar from "./sidebar.js"; // Sidebar class
-import Form from "./form.js";   // Form class
 import Scroll from "./scroll.js"; // Scroll class
 
 class Index {
