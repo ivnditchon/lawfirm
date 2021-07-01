@@ -1,4 +1,4 @@
-class Scroll {
+export default class Scroll {
 
     constructor(scrolling) {
         this._scrolling = scrolling;
@@ -11,7 +11,13 @@ class Scroll {
     set scrollHidden(hidden) {
         return this._scrolling.classList.add(hidden);
     }
+    
+    // Scroll to top automatically
+    scrollTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
 
 }
-
-export default Scroll;

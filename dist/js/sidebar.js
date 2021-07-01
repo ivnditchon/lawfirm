@@ -1,6 +1,6 @@
 import Scroll from "./scroll.js"; // Scroll class
 
-class Sidebar {
+export default class Sidebar {
 
     constructor(sidebar, navLinks, closeBtn, body) {
         this._sidebar = sidebar;
@@ -48,4 +48,3 @@ class Sidebar {
 
 }
 
-export default Sidebar;

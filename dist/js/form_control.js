@@ -1,4 +1,4 @@
-class FormControl {
+export default class FormControl {
 
     constructor(formControl, input) {
         this._formControl = formControl;
@@ -22,5 +22,3 @@ class FormControl {
     }
 
 }
-
-export default FormControl;

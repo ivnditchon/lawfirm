@@ -5,45 +5,47 @@ import Scroll from "./scroll.js"; // Scroll class
 class Index {
 
     // Private properties
-    constructor(menuBtn, appBtn, indexBody) {
-        this._menuBtn = menuBtn;
-        this._appointmentBtn = appBtn;
-        this._body = indexBody;     
+    constructor(indexParam = {menuBtn: document.querySelector("#menu"), 
+                         appBtn: document.querySelectorAll("#appointment-btn"), 
+                         indexBody: document.querySelector("body")}) {
+        this._menuBtn = indexParam.menuBtn;
+        this._appointmentBtn = indexParam.appBtn;
+        this._body = indexParam.indexBody;     
     }
 
-    // Public methods
-    menuToggle() { // Menu button toggle
-        
+    // Menu button toggle
+    menuToggle() { 
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(document.querySelector("#sidebar"), document.querySelectorAll("#nav-link"), document.querySelector("#close"), document.querySelector("body")); // Object instance of Sidebar class
+            let sidebar = new Sidebar(document.querySelector("#sidebar"), 
+                                      document.querySelectorAll("#nav-link"), document.querySelector("#close"), 
+                                      document.querySelector("body")); // Object instance of Sidebar class
             sidebar.sidebarActive = "sidebar-active";
             
             if (sidebar.sidebar.classList.contains("sidebar-active")) {
-                let scroll = new Scroll(document.querySelector("body"));
+                let scroll = new Scroll(this._body);
                 scroll.scrollHidden = "body";
                 sidebar.linkToggle();
                 sidebar.sidebarCloseBtn();  
             }
-            
-        });
 
+        });
     }
 
-    setAppForm() { // Set appointment form
-        
+    // Set appointment form
+    setAppForm() { 
         Array.from(this._appointmentBtn, (btn) => {
             btn.addEventListener("click", (e) => {
                 e.preventDefault();
                 window.location.href = "appointment__form.html","_self";
             });
         });
-
     }
 
 }
 
-const index = new Index(document.querySelector("#menu"), document.querySelectorAll("#appointment-btn"), document.querySelector("body"));
+const index = new Index();
+
 index.menuToggle();
 index.setAppForm();
 

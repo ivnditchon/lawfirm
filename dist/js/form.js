@@ -1,47 +1,67 @@
 import FormControl from "./form_control.js";
+import Scroll from "./scroll.js";
+import Modal from "./modal.js";
 
-export default class Form {
+
+class Form {
 
     // Private properties
-    constructor(appForm, input) {
-        this._appForm = appForm;
-        this._input = input;
+    constructor(formParam = {
+                            appForm: document.querySelector("#form"),  
+                            sucModal: document.querySelector("#appointment-success-modal"),
+                            formBody: document.querySelector("body")
+                            }) {
+        this._appForm = formParam.appForm;
+        this._input = formParam.input;
+        this._sucModal = formParam.sucModal;
+        this._formBody = formParam.formBody;
     }
 
     // Public method
     input() {
-        
-        Array.from(this._input, (input) => {
-            //Focus in input field
-            input.addEventListener("focus", (e) => {
-                
-                if (e.target.value === "" | e.target.value === null) {
-                    let formControl = e.target.parentElement;
-                    let form  = new FormControl(formControl, e.target);
-                    form.inputActive = "input-active";
-                    form.formControlActive = "form-control-active";
-                }
-
-            });
-            // Focus out input field
-            input.addEventListener("focusout", (e) => {
-                
-                if (e.target.value === "" | e.target.value === null) {
-                    let formControl = e.target.parentElement;
-                    let form  = new FormControl(formControl, e.target);
-                    form.inputNotActive = "input-active";
-                    form.formControlNotActive = "form-control-active";
-                }
-
-            });
+        //Focus in input field
+        this._appForm.addEventListener("focusin", (e) => { // Object event delegation
+            
+            if (e.target.value === "" | e.target.value === null) {
+                let formControl = e.target.parentElement;
+                let form  = new FormControl(formControl, e.target);
+                form.inputActive = "input-active";
+                form.formControlActive = "form-control-active";
+            }
 
         });
+        // Focus out input field
+        this._appForm.addEventListener("focusout", (e) => { 
+            let formControl = e.target.parentElement;
+            let form  = new FormControl(formControl, e.target);
+            
+            if (e.target.value === "" | e.target.value === null) {
+                form.inputNotActive = "input-active";
+                form.formControlNotActive = "form-control-active";
+            }
+            else {
+                form.formControlNotActive = "form-control-active";
+            }
 
+        });
+    }
+
+    // Form validation 
+    formValidation() {
+        this._appForm.addEventListener("submit", (e) => { 
+            e.preventDefault(); 
+            let modal = new Modal(this._sucModal); // Object instance
+            modal.modalActive = "appointment-success-modal";
+            let body = new Scroll(this._formBody); 
+            body.scrollTop(); // Auto scroll to top
+            body.scrollHidden = "body"; // Sidebar is hidden when modal is active
+        });
     }
 
 }
 
-const inputActive = new Form(document.querySelector("#form"), document.querySelectorAll("input"));
-inputActive.input();
+const form = new Form();
+form.input();
+form.formValidation();
 
 
