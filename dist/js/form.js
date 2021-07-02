@@ -25,7 +25,7 @@ class Form {
             if (e.target.value === "" | e.target.value === null) {
                 let formControl = e.target.parentElement;
                 let form  = new FormControl(formControl, e.target);
-                form.inputActive = "input-active";
+                form.inputActive = "app-input-active";
                 form.formControlActive = "form-control-active";
             }
 
@@ -36,7 +36,7 @@ class Form {
             let form  = new FormControl(formControl, e.target);
             
             if (e.target.value === "" | e.target.value === null) {
-                form.inputNotActive = "input-active";
+                form.inputNotActive = "app-input-active";
                 form.formControlNotActive = "form-control-active";
             }
             else {
