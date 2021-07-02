@@ -13,7 +13,7 @@ export default class Scroll {
     }
     
     // Scroll to top automatically
-    scrollTop() {
+    static scrollTop() {
         window.scrollTo({
             top: 0,
             behavior: "smooth"

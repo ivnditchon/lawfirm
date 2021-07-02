@@ -53,7 +53,7 @@ class Form {
             let modal = new Modal(this._sucModal); // Object instance
             modal.modalActive = "appointment-success-modal";
             let body = new Scroll(this._formBody); 
-            body.scrollTop(); // Auto scroll to top
+            Scroll.scrollTop(); // Auto scroll to top
             body.scrollHidden = "body"; // Sidebar is hidden when modal is active
         });
     }
