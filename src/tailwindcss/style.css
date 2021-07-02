@@ -16,16 +16,19 @@
     @apply overflow-y-hidden;
 } 
 
-/* ======= APPOINTMENT FORM ======= */
-
 /* Form control border turns to green if input is active */
 .form-control-active {
-    @apply border-none ring-2 ring-lightGreen;
+    @apply border-lightGreen  ring-lightGreen;
 }
 
-/* Input is active */
-.input-active + label {
-    @apply -top-2.5 xl:-top-3 left-0 text-xs xl:text-sm;
+/* Appointment form input is active  */
+.app-input-active + label {
+    @apply -top-2.5 xl:-top-3 left-0 text-xs text-lightGreen xl:text-sm;
+}
+
+/* Login form input is active */
+.login-input-active + label {
+    @apply -top-2.5 left-0 text-sm text-lightGreen;
 }
 
 /* Appointment modal success */
