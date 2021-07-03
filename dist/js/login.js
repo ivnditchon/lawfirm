@@ -12,7 +12,7 @@ class Login {
         // Focus input field
         this._loginForm.addEventListener("focusin", (e) => {
             
-            if (e.target.value === "" | e.target.value === null) {
+            if (e.target.value == "" | e.target.value == null) {
                 let formControl = e.target.parentElement;
                 let form  = new FormControl(formControl, e.target);
                 form.inputActive = "login-input-active";
