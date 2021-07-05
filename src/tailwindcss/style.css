@@ -37,3 +37,10 @@
 }
 
 
+/* ======= ADMIN PAGE ======= */
+
+/* Admin page main content */
+.main-content {
+    width: calc(100% - 48px);
+    left: 48px;
+}

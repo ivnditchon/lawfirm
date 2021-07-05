@@ -7,10 +7,10 @@ class Form {
 
     // Private properties
     constructor(formParam = {
-                            appForm: document.querySelector("#form"),  
-                            sucModal: document.querySelector("#appointment-success-modal"),
-                            formBody: document.querySelector("body")
-                            }) {
+        appForm: document.querySelector("#form"), 
+        sucModal: document.querySelector("#appointment-success-modal"), 
+        formBody: document.querySelector("body")
+        }) {
         this._appForm = formParam.appForm;
         this._input = formParam.input;
         this._sucModal = formParam.sucModal;
