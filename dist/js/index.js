@@ -5,9 +5,10 @@ import Scroll from "./scroll.js"; // Scroll class
 class Index {
 
     // Private properties
-    constructor(indexParam = {menuBtn: document.querySelector("#menu"), 
-                         appBtn: document.querySelectorAll("#appointment-btn"), 
-                         indexBody: document.querySelector("body")}) {
+    constructor(indexParam = {
+        menuBtn: document.querySelector("#menu"), 
+        appBtn: document.querySelectorAll("#appointment-btn"), 
+        indexBody: document.querySelector("body")}) {
         this._menuBtn = indexParam.menuBtn;
         this._appointmentBtn = indexParam.appBtn;
         this._body = indexParam.indexBody;     
