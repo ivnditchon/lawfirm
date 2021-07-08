@@ -8,19 +8,26 @@ class Index {
     constructor(indexParam = {
         menuBtn: document.querySelector("#menu"), 
         appBtn: document.querySelectorAll("#appointment-btn"), 
-        indexBody: document.querySelector("body")}) {
+        indexBody: document.querySelector("body"),
+        sidebar: document.querySelector("#sidebar"),
+        navLink: document.querySelectorAll("#nav-link"),
+        sidebarCloseBtn: document.querySelector("#close")}) {
         this._menuBtn = indexParam.menuBtn;
         this._appointmentBtn = indexParam.appBtn;
-        this._body = indexParam.indexBody;     
+        this._body = indexParam.indexBody;
+        this._sidebar = indexParam.sidebar;
+        this._navLink = indexParam.navLink;
+        this._sidebarCloseBtn = indexParam.sidebarCloseBtn;     
     }
 
     // Menu button toggle
     menuToggle() { 
         this._menuBtn.addEventListener("click", (e) =>  {
             e.preventDefault();
-            let sidebar = new Sidebar(document.querySelector("#sidebar"), 
-                                      document.querySelectorAll("#nav-link"), document.querySelector("#close"), 
-                                      document.querySelector("body")); // Object instance of Sidebar class
+            let sidebar = new Sidebar(this._sidebar, 
+                                      this._navLink, 
+                                      this._sidebarCloseBtn, 
+                                      this._body); // Object instance of Sidebar class
             sidebar.sidebarActive = "sidebar-active";
             
             if (sidebar.sidebar.classList.contains("sidebar-active")) {
