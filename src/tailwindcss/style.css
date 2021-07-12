@@ -44,3 +44,8 @@
     width: calc(100% - 48px);
     left: 48px;
 }
+
+/* Clients */
+#clients-info {
+    @apply hidden;
+}
