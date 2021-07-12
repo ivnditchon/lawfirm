@@ -137,7 +137,7 @@
             <!-- Clients -->
             <div class="w-full h-auto px-5 py-5 mt-3">
                 <!-- Clients' information -->
-                <div class="flex flex-col items-start w-full h-auto ">
+                <div id="clients-info" class="flex flex-col items-start w-full h-auto">
                     <h2 class="text-base text-veryDarkCyan font-semibold capitalize antialiased">clients' information</h2>
                     <div class="flex flex-col items-start w-full h-auto mt-5">
                         <!-- Search input container-->
@@ -367,6 +367,176 @@
                             </table>
                         </div>
                     </div>
+                </div>
+                <!-- Hearing schedule -->
+                <div id="hearing-schedule" class="flex flex-col items-start w-full h-auto">
+                    <h2 class="text-base text-veryDarkCyan font-semibold capitalize antialiased">hearing schedule</h2>
+                    <div class="flex flex-col items-start w-full h-auto mt-5">
+                        <!-- Search input container-->
+                        <div class="flex justify-center items-center w-full h-auto">
+                            <div class="flex justify-between items-center w-full h-9 px-3 bg-white border-r-0 border border-gray-300 rounded-l-md">
+                                <input type="text" name="searchBox" class="w-full h-auto text-xs text-veryDarkCyan font-normal outline-none antialiased" autocomplete="off" placeholder="Search client...">
+                            </div>
+                            <button class="flex justify-center items-center w-10 h-9 bg-lightGreen border border-lightGreen rounded-r-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-200" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex flex-col items-center w-full h-auto my-3">
+                            <div class="flex flex-col w-full h-auto">
+                                <label for="from" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">from</label>
+                                <input type="date" class="px-1 py-2 text-xs text-veryDarkCyan border border-gray-300 rounded-md outline-none">
+                            </div>
+                            <div class="flex flex-col w-full h-auto mt-2">
+                                <label for="to" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">to</label>
+                                <input type="date" class="px-1 py-2 text-xs text-veryDarkCyan border border-gray-300 rounded-md outline-none">
+                            </div>
+                            <button class="flex justify-between items-center px-3 py-2 mt-3 bg-lightGreen outline-none rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-200" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
+                                </svg>
+                                <span class="text-xs text-gray-200 font-medium tracking-wider capitalize antialiased">filter</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Hearing schedule table -->
+                    <div class="flex-grow w-full h-auto overflow-x-auto rounded-md border border-gray-300">
+                        <table class="w-full h-auto">
+                            <thead class="bg-gray-100">
+                                <tr class="w-full h-12">
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        firstname
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        middlename
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        lastname
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        emailaddress
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        phone
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide whitespace-nowrap antialiased">
+                                        house #
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        street
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        city
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        province
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        postal
+                                    </th>
+                                    <th scope="col" class="px-4 text-sm text-left text-veryDarkCyan font-semibold uppercase tracking-wide antialiased">
+                                        country
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-300">
+                                <tr class="w-full h-12">
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">ivan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">sing</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">ditchon</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">ivnditchon@gmail.com</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">09161719428</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">#001, NDU Compound</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">pinagsamahan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">cotabato city</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">maguindanao</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">9600</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">philippines</td>
+                                </tr>
+                                <tr class="w-full h-12">
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">yujin</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">yujinyuj@gmail.com</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">09161719428</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">#001, NDU Compound</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">pinagsamahan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">cotabato city</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">maguindanao</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">9600</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">philippines</td>
+                                </tr>
+                                <tr class="w-full h-12">
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">yujin</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">yujinyuj@gmail.com</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">09161719428</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">#001, NDU Compound</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">pinagsamahan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">cotabato city</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">maguindanao</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">9600</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">philippines</td>
+                                </tr>
+                                <tr class="w-full h-12">
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">ivan jay</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">sing</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">ditchon</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">ivnditchon@gmail.com</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">09161719428</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">#001, NDU Compound</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">pinagsamahan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">cotabato city</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">maguindanao</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">9600</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">philippines</td>
+                                    
+                                </tr>
+                                <tr class="w-full h-12">
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">yujin</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">yujinyuj@gmail.com</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">09161719428</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">#001, NDU Compound</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">pinagsamahan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">cotabato city</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">maguindanao</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">9600</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">philippines</td>
+                                </tr>
+                                <tr class="w-full h-12">
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">yujin</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">oliveros</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">yujinyuj@gmail.com</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">09161719428</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">#001, NDU Compound</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">pinagsamahan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">cotabato city</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">maguindanao</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">9600</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">philippines</td>
+                                </tr>
+                                <tr class="w-full h-12">
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">mohamad solaiman</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">taib</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">salik</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">mohammadsolaiman@gmail.com</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">09161719428</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">#001, NDU Compound</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">pinagsamahan</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">cotabato city</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">maguindanao</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap normal-case antialiased">9600</td>
+                                    <td class="px-4 text-left text-xs text-veryDarkCyan font-normal whitespace-nowrap capitalize antialiased">philippines</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
                 </div>
             </div>
         </main>
