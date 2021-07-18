@@ -22,7 +22,7 @@ class Form {
         //Focus in input field
         this._appForm.addEventListener("focusin", (e) => { // Object event delegation
             
-            if (e.target.value == "" | e.target.value == null) {
+            if (e.target.value == "" || e.target.value == null) {
                 let formControl = e.target.parentElement;
                 let form  = new FormControl(formControl, e.target);
                 form.inputActive = "app-input-active";
@@ -35,7 +35,7 @@ class Form {
             let formControl = e.target.parentElement;
             let form  = new FormControl(formControl, e.target);
             
-            if (e.target.value == "" | e.target.value == null) {
+            if (e.target.value == "" || e.target.value == null) {
                 form.inputNotActive = "app-input-active";
                 form.formControlNotActive = "form-control-active";
             }
