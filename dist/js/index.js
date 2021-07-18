@@ -1,3 +1,61 @@
+// Object literals 
+const index = {
+
+    elem: {
+        menu: document.querySelector("#menu"),
+        sidebar: document.querySelector("#sidebar"),
+        sidebarCloseBtn: document.querySelector("#close"),
+        navLinks: document.querySelectorAll("#nav-link"),
+        body: document.querySelector("body")
+    },
+
+    menuToggle: () => {
+        index.elem["menu"].addEventListener("click", () => {
+            index.sidebarActive();
+            index.scrollHidden();
+            if (index.elem["sidebar"].classList.contains("sidebar-active")) {
+                index.elem["sidebarCloseBtn"].addEventListener("click", () => index.sidebarHidden());
+                Array.from(index.elem["navLinks"], link => {
+                    link.addEventListener("click", () => {
+                        index.sidebarHidden();
+                        index.scrollActive();
+                    });
+                });
+            }
+
+        });
+    },
+
+    sidebarActive: () => {
+        return index.elem["sidebar"].classList.add("sidebar-active");
+    },
+
+    sidebarHidden: () => {
+        return index.elem["sidebar"].classList.remove("sidebar-active");
+    },
+
+    scrollActive: () => {
+        return index.elem["body"].classList.remove("body");
+    },
+
+    scrollHidden: () => {
+        return index.elem["body"].classList.add("body");
+    },
+
+    init: () => {
+        index.menuToggle();
+    }
+
+};
+const {init} = index;
+
+const main = () => {
+    init();
+}
+
+main();
+
+/*
 // Using module pattern 
 import Sidebar from "./sidebar.js"; // Sidebar class
 import Scroll from "./scroll.js"; // Scroll class
