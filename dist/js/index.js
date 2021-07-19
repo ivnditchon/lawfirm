@@ -1,14 +1,17 @@
 // Object literals 
 const index = {
 
+    // DOM elements
     elem: {
         menu: document.querySelector("#menu"),
+        appBtn: document.querySelectorAll("#appointment-btn"), 
         sidebar: document.querySelector("#sidebar"),
         sidebarCloseBtn: document.querySelector("#close"),
         navLinks: document.querySelectorAll("#nav-link"),
         body: document.querySelector("body")
     },
 
+    // Menu button toggle
     menuToggle: () => {
         index.elem["menu"].addEventListener("click", () => {
             index.sidebarActive();
@@ -26,33 +29,52 @@ const index = {
         });
     },
 
+    // Sidebar is active
     sidebarActive: () => {
         return index.elem["sidebar"].classList.add("sidebar-active");
     },
 
+    // Sidebar is hidden
     sidebarHidden: () => {
         return index.elem["sidebar"].classList.remove("sidebar-active");
     },
 
+    // Window scroll is active
     scrollActive: () => {
         return index.elem["body"].classList.remove("body");
     },
 
+    // Window scroll is hidden
     scrollHidden: () => {
         return index.elem["body"].classList.add("body");
     },
 
+    // Appointment button toggle
+    appointmentBtnToggle: () => {
+        Array.from(index.elem["appBtn"], (appBtn) => {
+            appBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.location.href = "appointment__form.html","_self";
+            });
+        } )
+    }, 
+    
+    // Initializer
     init: () => {
         index.menuToggle();
+        index.appointmentBtnToggle();
     }
 
 };
-const {init} = index;
+// Destructuring object
+const { init } = index;
 
+// Main function
 const main = () => {
     init();
 }
 
+// Invoke main function
 main();
 
 /*

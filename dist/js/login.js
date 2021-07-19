@@ -1,3 +1,54 @@
+// Object literals
+const login = {
+    
+    // DOM elements
+    elem: {
+        loginForm: document.querySelector("#form"),
+        loginBtn: document.querySelector("#login-btn")
+    },
+
+    // Input field
+    inputField: () => {
+        // Input active
+        login.elem["loginForm"].addEventListener("focusin", (e) => {
+            let input = e.target;
+            
+            if (input.value == "" || input.value == null) {
+                let formControl = input.parentElement;
+                formControl.classList.add("form-control-active");
+                input.classList.add("login-input-active");
+            }
+
+        });
+        // Input not active
+        login.elem["loginForm"].addEventListener("focusout", (e) => {
+            let input = e.target;
+
+            if (input.value == "" || input.value == null) {
+                let formControl = input.parentElement;
+                formControl.classList.remove("form-control-active");
+                input.classList.remove("login-input-active");
+            }
+
+        });
+    },
+
+    // Initializer
+    init: () => {
+        login.inputField();
+    }
+
+};
+// Destructuring object
+const { init } = login;
+
+const main = () => {
+    init();
+}
+
+main();
+
+/*
 import FormControl from "./form_control.js";
 
 class Login {
@@ -40,3 +91,4 @@ class Login {
 
 const login = new Login();
 login.input();
+*/
