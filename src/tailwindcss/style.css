@@ -39,8 +39,29 @@
 
 /* ======= ADMIN PAGE ======= */
 
-/* Admin page main content */
-.main-content {
+/* Sidebar active */
+.admin-sidebar-active {
+    @apply w-3/5;
+}
+
+/* Sidebar header is active */
+.admin-sidebar-header-active {
+    @apply justify-between;
+}
+
+/* Sidebar logo */
+.admin-sidebar-logo-active {
+    @apply block;
+}
+
+/* Main content */
+.admin-main-content {
     width: calc(100% - 48px);
     left: 48px;
 }
+
+/* Nav link name active */
+.admin-link-name-active {
+    @apply visible opacity-100 duration-500;
+}
+
