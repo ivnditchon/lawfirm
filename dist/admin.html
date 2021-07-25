@@ -39,15 +39,32 @@
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" id="link" class="flex items-center whitespace-nowrap
+                    <div class="flex items-center">
+                        <a href="#" id="link" class="flex items-center whitespace-nowrap
                         h-10 rounded-md px-2.5">
                         <!-- Cases icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fixed fill-current text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
                             <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
                         </svg>
-                        <span id="link-name" class="w-full py-2 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium ml-8 capitalize tracking-wide antialiased" id="link-name">cases</span>
-                    </a>
+                        <span id="link-name" class="py-2 ml-8 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium capitalize tracking-wide antialiased" id="link-name">cases</span>
+                        </a>
+                        <!-- dropdown icon-->
+                        <svg xmlns="http://www.w3.org/2000/svg" id="dropdown-icon" class="cases h-4 w-4 text-veryDarkCyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <ul id="cases" class="hidden px-2.5 ml-8">
+                        <li>
+                            <a href="#" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">admin case</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">civil case</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">criminal case</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="mb-2">
                     <a href="#" id="link" class="flex items-center whitespace-nowrap
@@ -70,15 +87,29 @@
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" id="link" class="flex items-center whitespace-nowrap
+                    <div class="flex items-center">
+                        <a href="#" id="link" class="flex items-center whitespace-nowrap
                         h-10 rounded-md px-2.5">
                         <!-- Payment icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fixed fill-current text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
                             <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
                         </svg>
-                        <span id="link-name" class="w-full py-2 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium ml-8 capitalize tracking-wide antialiased" id="link-name">payments</span>
-                    </a>
+                        <span id="link-name" class="py-2 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium ml-8 capitalize tracking-wide antialiased" id="link-name">payments</span>
+                        </a>
+                        <!-- dropdown icon-->
+                        <svg xmlns="http://www.w3.org/2000/svg" id="dropdown-icon" class="payments h-4 w-4 text-veryDarkCyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <ul id="payments" class="hidden px-2.5 ml-8">
+                        <li>
+                            <a href="#" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">acceptance fee</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">appearance fee</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#" id="link" class="flex items-center whitespace-nowrap
@@ -90,9 +121,22 @@
                         <span id="link-name" class="w-full py-2 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium ml-8 capitalize tracking-wide antialiased" id="link-name">settings</span>
                     </a>
                 </li>
+                <li class="mt-10">
+                    <a href="#" id="link" class="flex items-center whitespace-nowrap
+                        h-10 rounded-md px-2.5">
+                        <!-- Settings icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fixed fill-current text-lightGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                        <span id="link-name" class="w-full py-2 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium ml-8 capitalize tracking-wide antialiased" id="link-name">logout</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
+    <!-- Overlay -->
+    <div id="overlay" class="hidden absolute inset-0 w-full min-h-screen bg-black opacity-70 z-40"></div>
+    <!-- Content -->
     <div class="admin-main-content absolute w-full min-h-screen duration-500">
         <header role="banner" class="flex justify-between items-center w-full h-auto px-3 py-3 shadow-md">
             <h1 class="text-lg text-veryDarkCyan font-bold uppercase tracking-wide antialiased">dashboard</h1>
@@ -125,7 +169,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-gray-200" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
                     </svg>
-                    <span class="text-xs text-gray-200 font-medium tracking-wider capitalize antialiased">new client</span>
+                    <span class="text-sm text-gray-200 font-medium tracking-wider capitalize antialiased">new client</span>
                 </button>
             </div>
             <div class="flex justify-between items-start w-full h-auto px-5 py-3 mt-2 text-xs text-gray-400 capitalize overflow-x-auto">
@@ -147,7 +191,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                                 </svg>
-                                <input type="text" name="searchBox" class="w-full h-auto text-xs text-veryDarkCyan font-normal outline-none antialiased" autocomplete="off" placeholder="Search client...">
+                                <input type="text" name="searchBox" class="w-full h-auto text-sm text-veryDarkCyan font-normal outline-none antialiased" autocomplete="off" placeholder="Search client...">
                             </div>
                         </div>
                         <div class="flex justify-between items-center w-full h-auto my-3">
@@ -383,17 +427,17 @@
                         <div class="flex flex-col items-center w-full h-auto my-3">
                             <div class="flex flex-col w-full h-auto">
                                 <label for="from" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">from</label>
-                                <input type="date" class="px-1 py-2 text-xs text-veryDarkCyan border border-gray-300 rounded-md outline-none">
+                                <input type="date" class="w-full h-auto px-1 py-2 text-xs text-veryDarkCyan border border-gray-300 rounded-md outline-none">
                             </div>
                             <div class="flex flex-col w-full h-auto mt-2">
                                 <label for="to" class="text-xs text-veryDarkCyan font-normal capitalize antialiased">to</label>
-                                <input type="date" class="px-1 py-2 text-xs text-veryDarkCyan border border-gray-300 rounded-md outline-none">
+                                <input type="date" class="w-full h-auto px-1 py-2 text-xs text-veryDarkCyan border border-gray-300 rounded-md outline-none">
                             </div>
                             <button class="flex justify-between items-center px-3 py-2 mt-3 bg-lightGreen outline-none rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-200" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
                                 </svg>
-                                <span class="text-xs text-gray-200 font-medium tracking-wider capitalize antialiased">filter</span>
+                                <span class="text-sm text-gray-200 font-medium tracking-wider capitalize antialiased">filter</span>
                             </button>
                         </div>
                     </div>
@@ -828,51 +872,5 @@
             </div>
         </main>
     </div>
-
-
-
-
-
-    <!--<main role="main" class="w-full min-h-screen">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lightGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                                            </svg>
-
-        <div id="clients" class="flex justify-between items-center w-full h-36 px-5">
-            <div class="flex flex-col items-start">
-                <h2 class="text-xl text-veryDarkCyan font-bold antialiased">Clients</h2>
-                <div class="flex flex-col mt-2">
-                    <span class="text-xs text-gray-400 font-medium antialiased">List of all clients</span>
-                    <span class="mt-1 text-xs text-gray-400 font-medium antialiased">Total of 500</span>
-                </div>
-            </div>
-            <button class="flex justify-between items-center px-3 py-2 bg-lightGreen rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-gray-200" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
-                </svg>
-                <span class="text-xs text-gray-200 font-semibold tracking-wider antialiased">Add Client</span>
-            </button>
-        </div>
-        <div class="flex justify-between items-center w-full h-16 px-5 text-xs text-gray-400 capitalize overflow-x-auto">
-            <span class="text-veryDarkCyan font-semibold border-b-2 border-lightGreen">clients</span>
-            <span class="pl-5">cases</span>
-            <span class="pl-5">hearing</span>
-            <span class="pl-5">appointment</span>
-            <span class="pl-5">payments</span>
-        </div>
-        Search bar 
-        <div class="flex justify-center items-center w-full h-12 px-5">
-            <div class="flex justify-items-start items-center w-full h-9 px-3 border border-gray-300 rounded-l-full">
-                <input type="text" name="search" id="search" class="w-full h-7 px-2 text-xs text-veryDarkCyan outline-none" placeholder="Search...">
-            </div>
-            <button class="flex justify-items-start items-center w-auto h-9 py-1 px-3 bg-lightGreen border border-l-0 border-lightGreen rounded-r-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-200" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-                  </svg>
-            </button>
-        </div>
-        Clients -->
-    </main>
 </body>
 </html>
