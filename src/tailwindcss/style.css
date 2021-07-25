@@ -41,7 +41,7 @@
 
 /* Sidebar active */
 .admin-sidebar-active {
-    @apply w-3/5;
+    @apply w-2/4;
 }
 
 /* Sidebar header is active */
@@ -65,3 +65,12 @@
     @apply visible opacity-100 duration-500;
 }
 
+/* Overlay active */
+.admin-overlay-active {
+    @apply block;
+}
+
+/* Sidebar dropdown cases active */
+.admin-dropdown-active {
+    @apply block;
+}
