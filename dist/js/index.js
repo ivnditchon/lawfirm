@@ -30,29 +30,21 @@ const index = {
     },
 
     // Sidebar is active
-    sidebarActive: () => {
-        return index.elem["sidebar"].classList.add("sidebar-active");
-    },
+    sidebarActive: () => index.elem["sidebar"].classList.add("sidebar-active"),
 
     // Sidebar is hidden
-    sidebarHidden: () => {
-        return index.elem["sidebar"].classList.remove("sidebar-active");
-    },
+    sidebarHidden: () => index.elem["sidebar"].classList.remove("sidebar-active"),
 
     // Window scroll is active
-    scrollActive: () => {
-        return index.elem["body"].classList.remove("body");
-    },
+    scrollActive: () => index.elem["body"].classList.remove("body"),
 
     // Window scroll is hidden
-    scrollHidden: () => {
-        return index.elem["body"].classList.add("body");
-    },
+    scrollHidden: () => index.elem["body"].classList.add("body"),
 
     // Appointment button toggle
     appointmentBtnToggle: () => {
-        Array.from(index.elem["appBtn"], (appBtn) => {
-            appBtn.addEventListener("click", (e) => {
+        Array.from(index.elem["appBtn"], appBtn => {
+            appBtn.addEventListener("click", e => {
                 e.preventDefault();
                 window.location.href = "appointment__form.html","_self";
             });
