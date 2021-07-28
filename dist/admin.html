@@ -15,15 +15,19 @@
 <body class="font-primary">
     <!-- Sidebar -->
     <div id="sidebar" class="flex flex-col w-12 h-full px-1 fixed z-50 left-0 top-0 bg-gray-100 duration-500 ease-in-out">
-        <!-- Menu -->
+        <!-- Sidebar Header -->
         <div id="sidebar-header" class="flex justify-center items-center px-2.5 whitespace-nowrap
         h-14 transition-all delay-150">
-            <!-- Logo -->
+            <!-- Sidebar Logo -->
             <img src="./images/lawfirm-logo.png" id="sidebar-logo" class="hidden h-9 object-contain" alt="Torres and Lauban Law">
-            <!-- Menu icon -->
+            <!-- Sidebar menu icon -->
             <svg xmlns="http://www.w3.org/2000/svg" id="menu" class="h-5 w-5 text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
             </svg>
+            <!-- Sidebar close icon -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" id="sidebar-close" class="hidden h-5 w-5 text-lightGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+            </svg> -->
         </div>
         <!-- Navigation -->
         <nav role="navigation" class="my-2">
@@ -43,14 +47,16 @@
                         <a href="#" id="link" class="flex items-center whitespace-nowrap
                         h-10 rounded-md px-2.5">
                         <!-- Cases icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fixed fill-current text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
-                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-                        </svg>
-                        <span id="link-name" class="py-2 ml-8 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium capitalize tracking-wide antialiased" id="link-name">cases</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fixed fill-current text-lightGreen" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                            </svg>
+                            <div id="link-name" class="flex items-center py-2 ml-8 invisible opacity-0 duration-500" id="link-name">
+                                <span class="text-sm text-veryDarkCyan font-medium capitalize tracking-wide antialiased">cases</span>
+                            </div>
                         </a>
                         <!-- dropdown icon-->
-                        <svg xmlns="http://www.w3.org/2000/svg" id="dropdown-icon" class="cases h-4 w-4 text-veryDarkCyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="dropdown-icon" class="cases h-4 w-4 text-veryDarkCyan invisible opacity-0 duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
@@ -128,7 +134,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fixed fill-current text-lightGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                         </svg>
-                        <span id="link-name" class="w-full py-2 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium ml-8 capitalize tracking-wide antialiased" id="link-name">logout</span>
+                        <span id="link-name" class="w-full py-2 invisible opacity-0 duration-500 text-sm text-veryDarkCyan font-medium ml-8 capitalize tracking-wide antialiased" id="link-name">logout </span>
                     </a>
                 </li>
             </ul>
@@ -421,7 +427,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                                 </svg>
-                                <input type="text" name="searchBox" class="w-full h-auto text-xs text-veryDarkCyan font-normal outline-none antialiased" autocomplete="off" placeholder="Search client...">
+                                <input type="text" name="searchBox" class="w-full h-auto text-sm text-veryDarkCyan font-normal outline-none antialiased" autocomplete="off" placeholder="Search client...">
                             </div>
                         </div>
                         <div class="flex flex-col items-center w-full h-auto my-3">
@@ -653,7 +659,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                                 </svg>
-                                <input type="text" name="searchBox" class="w-full h-auto text-xs text-veryDarkCyan font-normal outline-none antialiased" autocomplete="off" placeholder="Search client...">
+                                <input type="text" name="searchBox" class="w-full h-auto text-sm text-veryDarkCyan font-normal outline-none antialiased" autocomplete="off" placeholder="Search client...">
                             </div>
                         </div>
                         <div class="flex flex-col w-full h-auto my-3">
