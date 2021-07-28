@@ -54,6 +54,16 @@
     @apply block;
 }
 
+/* Sidebar close */
+.admin-sidebar-close-icon-active {
+    @apply block;
+}
+
+/* Sidebar menu hidden */
+.admin-sidebar-menu-hidden {
+    @apply hidden;
+}
+
 /* Main content */
 .admin-main-content {
     width: calc(100% - 48px);
@@ -65,12 +75,23 @@
     @apply visible opacity-100 duration-500;
 }
 
+/* Dropdown icon active */
+.admin-dropdown-icon-active {
+    @apply visible opacity-100 duration-500;
+}
+
 /* Overlay active */
 .admin-overlay-active {
     @apply block;
+}
+
+/* Nav dropdown icon rotate */
+.admin-nav-icon-rotate {
+    @apply transform rotate-180;
 }
 
 /* Sidebar dropdown cases active */
 .admin-dropdown-active {
     @apply block;
 }
+

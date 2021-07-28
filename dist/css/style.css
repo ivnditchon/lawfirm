@@ -1576,6 +1576,18 @@ video {
   display: block;
 }
 
+/* Sidebar close */
+
+.admin-sidebar-close-icon-active {
+  display: block;
+}
+
+/* Sidebar menu hidden */
+
+.admin-sidebar-menu-hidden {
+  display: none;
+}
+
 /* Main content */
 
 .admin-main-content {
@@ -1591,10 +1603,32 @@ video {
   transition-duration: 500ms;
 }
 
+/* Dropdown icon active */
+
+.admin-dropdown-icon-active {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 500ms;
+}
+
 /* Overlay active */
 
 .admin-overlay-active {
   display: block;
+}
+
+/* Nav dropdown icon rotate */
+
+.admin-nav-icon-rotate {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-rotate: 180deg;
 }
 
 /* Sidebar dropdown cases active */
@@ -2163,3 +2197,4 @@ video {
     grid-column: span 5 / span 5;
   }
 }
+
