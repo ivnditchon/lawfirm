@@ -3,6 +3,7 @@ const admin = {
 
     // DOM elements
     elem: {
+        body: document.querySelector("body"),
         sidebarMenu: document.querySelector("#menu"),
         sidebar: document.querySelector("#sidebar"),
         sidebarHeader: document.querySelector("#sidebar-header"),
@@ -12,18 +13,22 @@ const admin = {
         navCases: document.querySelector("#cases"),
         navPayments: document.querySelector("#payments"),
         overlay: document.querySelector("#overlay"),
+        actionIcons: document.querySelectorAll("#action-icon"),
+        dropdownMenu: document.querySelectorAll("#dropdown-menu"),
+        clientActionModal: document.querySelector("#client-action-modal"),
+        closeClientModal: document.querySelector("#close-modal"),
     },
 
     // Menu toggle
     menuToggle() {
-        admin.elem["sidebarMenu"].addEventListener("click", e => {
-            e.preventDefault();
+        admin.elem["sidebarMenu"].addEventListener("click", () => {
             admin.sidebar();
         });
     },
 
     // Sidebar 
     sidebar() {
+        admin.elem["body"].classList.toggle("body");
         admin.elem["sidebar"].classList.toggle("admin-sidebar-active");
         admin.elem["sidebarHeader"].classList.toggle("admin-sidebar-header-active");
         admin.elem["sidebarLogo"].classList.toggle("admin-sidebar-logo-active");
@@ -32,8 +37,7 @@ const admin = {
         Array.from(admin.elem["navDropdownIcon"], icon => {
             icon.classList.toggle("admin-dropdown-icon-active");
             icon.addEventListener("click", e => {
-                e.preventDefault();
-                
+               
                 if (e.target.classList.contains("cases")) {
                     e.target.classList.toggle("admin-nav-icon-rotate");
                     admin.elem["navCases"].classList.toggle("admin-dropdown-active");
@@ -63,8 +67,32 @@ const admin = {
         }
     },
 
+    // Action 
+    action() {
+        Array.from(admin.elem["actionIcons"], action => {
+            action.addEventListener("click", () => {
+                if (admin.elem["clientActionModal"].classList.contains("hidden")) {
+                    admin.elem["clientActionModal"].classList.remove("hidden");
+                    admin.elem["clientActionModal"].classList.add("flex");
+                    admin.elem["body"].classList.add("overflow-hidden");
+                }
+
+                if (admin.elem["clientActionModal"].classList.contains("flex")) {
+                    admin.elem["closeClientModal"].addEventListener("click", () => {
+                        admin.elem["clientActionModal"].classList.remove("flex");
+                        admin.elem["clientActionModal"].classList.add("hidden");
+                        admin.elem["body"].classList.remove("overflow-hidden");
+                    });
+                }
+            });
+        });
+    },
+
     // Initializer
-    init() { admin.menuToggle(); }
+    init() { 
+        admin.menuToggle();
+        admin.action();
+    }
 
 };
 // Destructuring object

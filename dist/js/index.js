@@ -17,7 +17,10 @@ const index = {
             index.sidebarActive();
             index.scrollHidden();
             if (index.elem["sidebar"].classList.contains("sidebar-active")) {
-                index.elem["sidebarCloseBtn"].addEventListener("click", () => index.sidebarHidden());
+                index.elem["sidebarCloseBtn"].addEventListener("click", () => {
+                    index.sidebarHidden();
+                    index.scrollActive();
+                });
                 Array.from(index.elem["navLinks"], link => {
                     link.addEventListener("click", () => {
                         index.sidebarHidden();
