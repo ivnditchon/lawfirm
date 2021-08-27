@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Preventing from scrolling */
+.body {
+    @apply overflow-y-hidden;
+} 
+
 /* ======= SIDEBAR ======= */
 .sidebar-active {
     @apply left-0;
@@ -10,11 +16,6 @@
 .sidebar-active + #overlay {
     @apply block;
 }
-
-/* Preventing from scrolling */
-.body {
-    @apply overflow-y-hidden;
-} 
 
 /* Form control border turns to green if input is active */
 .form-control-active {
@@ -37,7 +38,9 @@
 }
 
 
-/* ======= ADMIN PAGE ======= */
+/* ========== ADMIN PAGE ========== */
+
+/* === SIDEBAR === */
 
 /* Sidebar active */
 .admin-sidebar-active {
@@ -52,22 +55,6 @@
 /* Sidebar logo */
 .admin-sidebar-logo-active {
     @apply block;
-}
-
-/* Sidebar close */
-.admin-sidebar-close-icon-active {
-    @apply block;
-}
-
-/* Sidebar menu hidden */
-.admin-sidebar-menu-hidden {
-    @apply hidden;
-}
-
-/* Main content */
-.admin-main-content {
-    width: calc(100% - 48px);
-    left: 48px;
 }
 
 /* Nav link name active */
@@ -94,4 +81,18 @@
 .admin-dropdown-active {
     @apply block;
 }
+
+/* === MAIN CONTENT === */
+
+/* Main content */
+.admin-main-content {
+    width: calc(100% - 48px);
+    left: 48px;
+}
+
+.icon-rotate {
+    @apply transform rotate-180;
+}
+
+
 

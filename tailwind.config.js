@@ -1,8 +1,5 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ['./dist/**/*.{html, js}']
-  },
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -25,7 +22,8 @@ module.exports = {
         secondary: ['Stoke']
       },
       animation: {
-        'modal': 'modal 0.8s ease-in-out forwards'
+        'modal': 'modal 0.8s ease-in-out forwards',
+        'clientModal': 'fadeIn 0.6s ease-in-out forwards'
       },
       keyframes: {
         modal: {  
@@ -35,6 +33,14 @@ module.exports = {
           'to': {
             top: '50%'
           }
+        },
+        fadeIn: {
+          '0%': {
+            opacity: 0
+          },
+          '100%': { 
+            opacity: 1
+          } 
         }
       },
       backgroundImage: theme => ({
